@@ -13,3 +13,10 @@ https://ai6034.mit.edu/wiki/index.php?title=Main_Page
 
 ## Demos:
 https://ai6034.mit.edu/wiki/index.php?title=Demonstrations
+
+## Lectures:
+http://courses.csail.mit.edu/6.034f/ai3/
+
+## Labs:
+https://ai6034.mit.edu/wiki/index.php?title=Labs
+https://www.youtube.com/watch?v=aRoK7aAevxY

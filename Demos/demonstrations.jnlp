@@ -1,0 +1,37 @@
+
+<?xml version="1.0" encoding="utf-8"?> 
+<!-- IF YOU CHANGE THE CODEBASE YOU HAVE TO CHANGE IT IN TWO PLACES, HERE AND IN THE APPLICATION-DESC SECTION -->
+<jnlp  spec="1.0+" codebase='https://courses.csail.mit.edu/6.034f/demonstrations/'  href="https://courses.csail.mit.edu/6.034f/demonstrations/demonstrations.jnlp">
+
+  <information> 
+    <title>demonstrations</title>
+    <vendor>Patrick Henry Winston</vendor> 
+    
+    <description>FX demonstrations for web</description>
+    <icon href="icon.gif"/>  <icon kind="splash" href="splash.jpg"/>
+    <offline-allowed/>     
+  </information>
+  <security> 
+      <all-permissions/> 
+  </security> 
+  <resources> 
+    <j2se version="1.8+" initial-heap-size="256m" max-heap-size="1024m"/> 
+    <jar href="demonstrations.jar" />
+
+    <jar href="demonstrations_lib/Jama-1.0.3.jar" />
+    <jar href="demonstrations_lib/TableLayout.jar" />
+
+  </resources> 
+  <application-desc>
+    <argument>-b</argument>
+    <argument>https://courses.csail.mit.edu/6.034f/demonstrations/</argument>
+ 
+     <argument>-j</argument>
+     <argument>/demonstrations.jar</argument>
+     <argument>-j</argument>
+     <argument>/demonstrations_lib/Jama-1.0.3.jar</argument>
+     <argument>-j</argument>
+     <argument>/demonstrations_lib/TableLayout.jar</argument>
+   </application-desc>
+</jnlp> 
+

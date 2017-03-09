@@ -1,4 +1,4 @@
-MEGA Recitation 2
+Mega-R2. Basic Search, Optimal Search
 https://www.youtube.com/watch?v=Tl_p5pgBsyM&list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi&index=25
 29.01.2017
 

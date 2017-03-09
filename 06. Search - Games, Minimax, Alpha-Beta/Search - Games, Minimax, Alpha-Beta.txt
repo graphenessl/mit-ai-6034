@@ -45,6 +45,7 @@ https://www.youtube.com/watch?v=STjW3eH0Cik
 - Alpha-beta is not a different algorithm than MIN-MAX, it's just a layer on top of it.
 - Alpha-beta does not produce different results than MIN-MAX. It's just a speed-up. It's not an approximation, gives exactly
 the same answer as MIN-MAX.
+- Algorithm demo: http://web.mit.edu/dxh/www/adverse/index.html
 
 7. Progressive Deepening!
 - The amount of computational effort needed to be done on each level

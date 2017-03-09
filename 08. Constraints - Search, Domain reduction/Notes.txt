@@ -3,6 +3,13 @@ https://www.youtube.com/watch?v=d1KyYyLmGpA
 09.03.2017
 
 0. General:
+- EASIEST FIRST PRINCIPLE: Always start with the easiest things first, in order to get more work done
+- EXTREMES FIRST PRNCIPLE: Always start with the minimum and maximum values first, since they are fastest to compute usually.
+  That way you get quickly 2 answers. Then optimize your way until you find the correct values in the middle.
+  Also it is quicker if you start lowering the maximum or minimum number until you hit a situation when you no longer get a correct solution.
+- Constraints: You need to be able to _model_ constraints
+- MARSHALL ARTS PRINCIPLE:
+- ANYTIME ALGORITHM: You tell your boss is something between MIN and MAX
 
 1. Finding countries of the US:
 - Set flags:
@@ -10,3 +17,50 @@ https://www.youtube.com/watch?v=d1KyYyLmGpA
     G - Green
     B - Blue
     Y - Yellow
+
+- Variable      V: Something that can have an assignment
+- Value         X: Something that can be an assignment
+- Domain        D: Bag of values
+- Constraint    C: Limit on variable values
+
+- States                                    => Variables
+- Colors                                    => Values
+- Remaining colors                          => Domain
+- Two colors cannot be next to each other   => Constraint
+
+2. Algorithm: Domain Reduction:
+- Running a DFS (Depth-First Search) assignment:
+    1. FOR each DFS assignment (X):
+        2. FOR each variable V considered: (State)
+            3. FOR each value Xi in Di (Domain):
+                4. FOR each constraint C (Xi,Xj) where Xj is an element of Dj
+- Solution: Most constrained checked first works about 10 times faster than least-constrained first
+- Application: Also good for "Resource planning" type of problems
+
+3. Consider:
+3.1. Nothing
+3.2. Assignment
+3.3. Neighbours
+3.4. Reduced D to 1 value 
+3.5. Propagate checking through "V" with reduced "D"
+3.6. Everything 
+
+4. Resource planning:
+- Problem: Flight planning
+- There is a minimum ground time constraint between Flights
+
+Flight 1: Boston -> New York
+Flight 2:                       New York -> Boston
+Flight 3:                                           Boston -> New York
+Flight 4:                                                               New York -> Boston
+Flight 5: Boston -------------------------------------------------------------------------------> Los Angeles
+
+- Technique: "Check Neighbours Only": Tries to avoid duplication only with the neighbour elements, thus alowing greater greater
+  repititon and preservation
+
+5. Rules for a good "Resource planning algorithm:
+- Most constrained is used first
+- Propagate through domains with domain reducing algorithm
+- Use MIN and MAX values to determine the range when computations take too long
+- Underresourced: Search takes too long
+- Overresouced: Search is completed almost instantly

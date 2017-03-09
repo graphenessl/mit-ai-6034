@@ -13,11 +13,15 @@ These are my notes watching the MIT 6.034 course, together with short explanatio
 ## Wiki:
 https://ai6034.mit.edu/wiki/index.php?title=Main_Page
 
-## Demos:
-https://ai6034.mit.edu/wiki/index.php?title=Demonstrations
+## Schedule and topics:
+https://ai6034.mit.edu/wiki/index.php?title=Reference_material_and_playlist
 
 ## Lectures:
 http://courses.csail.mit.edu/6.034f/ai3/
+
+## Demos:
+https://ai6034.mit.edu/wiki/index.php?title=Demonstrations
+http://web.mit.edu/dxh/www/
 
 ## Labs:
 https://ai6034.mit.edu/wiki/index.php?title=Labs

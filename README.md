@@ -16,6 +16,9 @@ https://ai6034.mit.edu/wiki/index.php?title=Main_Page
 ## Schedule and topics:
 https://ai6034.mit.edu/wiki/index.php?title=Reference_material_and_playlist
 
+## Readings for each class:
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/readings/
+
 ## Lectures:
 http://courses.csail.mit.edu/6.034f/ai3/
 
@@ -25,6 +28,9 @@ https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-ar
 ## Demos:
 https://ai6034.mit.edu/wiki/index.php?title=Demonstrations
 http://web.mit.edu/dxh/www/
+
+## Tutorials for some algorithms:
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/tutorials/
 
 ## Labs:
 https://ai6034.mit.edu/wiki/index.php?title=Labs

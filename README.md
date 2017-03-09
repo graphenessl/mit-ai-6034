@@ -5,6 +5,8 @@ Course: http://ocw.mit.edu/6-034F10
 
 Instructor: **Patrick Winston**
 
+Center for Brains, Minds + Machines (CBMM): http://cbmm.mit.edu/education/courses 
+
 ## Description:
 These are my notes watching the MIT 6.034 course, together with short explanations and clarifications.
 
@@ -19,4 +21,5 @@ http://courses.csail.mit.edu/6.034f/ai3/
 
 ## Labs:
 https://ai6034.mit.edu/wiki/index.php?title=Labs
+
 https://www.youtube.com/watch?v=aRoK7aAevxY

@@ -1,6 +1,9 @@
 # MIT 6.034 Artificial Intelligence, Fall 2010
 Course: http://ocw.mit.edu/6-034F10
-Instructor: Patrick Winston
+
+![alt text](https://ai6034.mit.edu/wiki/images/Phw3.jpg "Patrick Winston")
+
+Instructor: **Patrick Winston**
 
 ## Description:
 These are my notes watching the MIT 6.034 course, together with short explanations and clarifications.

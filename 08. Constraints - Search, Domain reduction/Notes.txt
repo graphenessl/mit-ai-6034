@@ -1,6 +1,9 @@
 8. Constraints: Search, Domain reduction
 https://www.youtube.com/watch?v=d1KyYyLmGpA
 09.03.2017
+Description: This lecture covers map coloring and related scheduling problems. 
+We develop pseudocode for the domain reduction algorithm and consider how much constraint propagation is most efficient, 
+and whether to start with the most or least constrained variables.
 
 0. General:
 - EASIEST FIRST PRINCIPLE: Always start with the easiest things first, in order to get more work done
@@ -8,7 +11,7 @@ https://www.youtube.com/watch?v=d1KyYyLmGpA
   That way you get quickly 2 answers. Then optimize your way until you find the correct values in the middle.
   Also it is quicker if you start lowering the maximum or minimum number until you hit a situation when you no longer get a correct solution.
 - Constraints: You need to be able to _model_ constraints
-- MARSHALL ARTS PRINCIPLE:
+- MARTIAL ARTS PRINCIPLE: Use the powers of the enemy against them
 - ANYTIME ALGORITHM: You tell your boss is something between MIN and MAX
 
 1. Finding countries of the US:

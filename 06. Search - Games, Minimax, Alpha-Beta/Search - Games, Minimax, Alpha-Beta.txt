@@ -3,11 +3,14 @@ https://www.youtube.com/watch?v=STjW3eH0Cik
 6. Search: Games, Minimax, and Alpha-Beta
 
 0. General:
+ - Anytime algorithm: An algorithm which provides an answer all the time, althought it might not be the best one at first.
+   Always have an answer ready to go as soon as an answer is demanded
+ - Martial arts principle: We're using the enemy's characteristics against them.
 
 1. How a computer thinks:
  - Analysis -> Strategy -> Tactics -> Move
  - IF/THEN rules - it doesn't do any complicated overall analysis
- 
+
 2. Chess game program:
 2.1. Analysis -> Strategy -> Tactics -> Move
 2.2. IF/THEN rules - it doesn't do any complicated overall analysis
@@ -49,9 +52,9 @@ the same answer as MIN-MAX.
 
 7. Progressive Deepening!
 - The amount of computational effort needed to be done on each level
-is not much different than the amount of computation needs to be done on just one level, the penultimate one
+  is not much different than the amount of computation needs to be done on just one level, the penultimate one
 - Progressive deepning ensures you get a better answer on each layer
-- It provides you with an answer all the time.
+- It provides you with an answer all the time. (Anytime algorithm)
 
 8. Deep Blue:
 - This is the computer which beat the chess champion

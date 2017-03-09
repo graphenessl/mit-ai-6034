@@ -19,6 +19,9 @@ https://ai6034.mit.edu/wiki/index.php?title=Reference_material_and_playlist
 ## Lectures:
 http://courses.csail.mit.edu/6.034f/ai3/
 
+## Videos:
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/lecture-videos/
+
 ## Demos:
 https://ai6034.mit.edu/wiki/index.php?title=Demonstrations
 http://web.mit.edu/dxh/www/

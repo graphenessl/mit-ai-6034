@@ -1,0 +1,53 @@
+Lecture 07: Constraints: Interpreting Line Drawings
+https://www.youtube.com/watch?v=l-tzjenXrvI
+08.03.2017
+
+0. General:
+- Before you start making a research on something, you have to get a feeling of the domain
+- He took a lot of toys and started analyzing their shapes
+- Humans remember words by their first prefixes
+- This is the beginnings of Machine Vision
+
+0.1. Criteria for Success:
+- Problem: You need to have a problem which needs to be solved.
+- Method: A method which works in solving the problem
+- Principle: A principle which proves and explains why the solution works
+
+1. Search how many objects are composing a bigger object:
+- Determine faces
+- Determine with how many borders each face is linked to its neighbour faces
+- Algorithm: If connected with 2 or more links
+
+2. Scientists working on this problem:
+- GUZMAN -> HUFFMAN -> WALTZ
+- Guzman: Experimentalist. Started first the problem. He created the problem.
+- Huffman: Mathematician. Continued the problem by applying constraints and constraint rules. No 3D constraints. He created the method.
+- David Waltz: Graduate student. He brought it all together.
+
+3. Huffman:
+- Huffman took the problem of Guzman and modeled it mathematically applying the following constraints:
+*) 1. General position
+*) 2. Trihedral world: Only having 3 planes
+*) 3. Isolating the physical world. He added following items:
+- He created a set: definitions of how vertexes and lines can connected
+    - Concave:  (вдлъбнатини)
+    - Convex:   (изпъкналости)
+    - Boundary: (граници)
+- Huffman also has a check to see if the built example can be constructed within the defined constraints.
+
+
+3.1. Vocabulary:
+- Vertexes
+- Edges
+- Junctions
+- Lines
+
+4. Waltz:
+- He added 4 additional labels:
+*) Cracks
+*) Shadows
+*) NTV: Non Trihedra Vertexes (многостранни върхове
+*) Light
+- These 4 labels, forced him to go up to 50+ labels in the end (light from left, light from right and etc.)
+- Waltz initially created a program with DFS search, but it was too slow, since it exponentially searched
+- Walt's algorithm also intelligently disables options which are not allowed by the parent node

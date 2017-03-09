@@ -1,0 +1,29 @@
+Mega 03
+07.03.2017
+https://www.youtube.com/watch?v=hM2EAvMkhtk&list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi&index=26
+Mega-R3. Games, Minimax, Alpha-Beta
+
+1. General:
+- In Min-Max it doesn't matter much what kind of search you use in order to get the answer
+- Answer: A-C-H 
+
+2. Nuclear options principle:
+*) Alpha:   MAX: >===> (Negative infinity: Maximizer loses)
+*) Beta:    MIN: >===> (Positive infinity: Minimizer loses
+- Default values: -/+ infinity
+- MAX: Alpha -Infinity
+- MIN: Beta  +Infinity
+- They start to increase/decrease their numbers until they cannot do it no longer
+
+3. Snowhite principle:
+- You start with the Alpha/Beta which you have inherited from your parents
+- But if you find down the way a trait that you is better, you take it and keep it
+- In tree search: You start with the default value of the MAX(imizer) or MIN(imizer) which is:
+MAX: Alpha -Infinity
+MIN: Beta  +Infinity
+  and compare it with the current value. If it is better than -/+ Infinity for the MAX/MIN, you keep it.
+- The leaves which contain lower values in their children, can be cut off
+
+4. Alpha-beta pruning:
+Good explanation of the pruning:
+https://www.youtube.com/watch?v=xBXHtz4Gbdo

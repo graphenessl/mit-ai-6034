@@ -1,0 +1,54 @@
+MEGA Recitation 2
+https://www.youtube.com/watch?v=Tl_p5pgBsyM&list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi&index=25
+29.01.2017
+
+1. General
+- Search is about choice, not a map
+- Lexigography: Moving things by alphabetic order
+- The most optimal direction route is preferred, instead of lexograpic order
+- In tree search, lexicographic order is preferred
+- Rule: Not biting your own tail
+- Rule: The same node should not appear in the same path
+- Rule: Read the instructions. At least 3 or 5 times. Make sure you are NOT everyone.
+- [!!!] Backtracking [14:30]: The path which was a deadend is thrown away from the stack only ONCE,
+so it's only one backtrack step, not 2. Backtracking is always considered one step.
+- The moment you find something with the goal (G) the search is over!
+
+2. Depth-first search:
+- Backtracking: Going back to the node with more than 1 choice
+- Fast way: [17:00] (Don't do it!)
+S-A-D (Backtrack to S - the node with more than 1 choice)
+S-B-H-F-E-C (Backtrack to F - the node with more than 1 choice)
+F-J-I-G (G is the goal)
+- ? When you are not sure about the depth, the lexographic order is used
+- Depth-first search goes to the depth faster so it might get too deep in the wrong direction, this is why it uses backtrack
+
+3. Breadth-first search:
+- Guaranteed to give the path with least number of jumps
+S-B-I-H-G 
+- Although backtracking is allowed in BFS, it doesn't make sense, since you spend more energy on going back to the last node
+- The lexographic order is used but subtly
+- In BFS there is a greater chance to hit the same node again
+- The new breadth is appended all at once (the entire row A,B,C not one by one)
+
+4. Optimal search: [27:45]
+
+5. Heuristic:
+Heuristic, is any approach to problem solving, learning, or discovery that employs a practical method not guaranteed to be optimal or perfect, but sufficient for the immediate goals.
+
+6. Difference between Branch & Bound AND A*
+
+7. A* is just like Branch & Bound with some extras like:
+- Extended list: See's where we went and never goes there again
+- Heuristic: Tell us what is our estimate left distance until the end
+- Heuristic: Given that I am here, how much distance is left from this node to the end.
+- Heuristics: Must be consistent and _admissable_
+- Heuristics: Must never be an over estimate. It must be always and under-estimate or equal estimate.
+- Heuristics: Can lead to wrong solutions
+- Heuristics: Always prefer an understimate.
+- Heuristics: Consistency: Between the heuristics of two nodes, their substraction is always less than the substraction of the distances itself
+- Heuristics: Admissability: Consistency between every single node and G. It is a stronger claim. Any graph which is consistent, is always admissable.
+
+8. Branch & Bound:
+- It is a slower algorithm, but it always gets it right
+- It's safe, because it does not use heuristics (or heuristic=0 for each node, which is an understimate)

@@ -1,0 +1,40 @@
+22.01.2017
+Lecture 05: Search: Optimal, Branch and Bound, A*
+https://www.youtube.com/watch?v=gGQ-vAmdAOI
+
+1. General:
+- In Public administration, the explanation of why something is done is different than the reason/purpose.
+- "Dead Horse Principle": A path which has already been extended and not leading anywhere is filtered out.
+
+2. Heuristic distance:
+The distance from the currend node to the goal node (by dotted line, not actual lines)
+
+2.1: Oracle method:
+- Guess the shortest lenght path :)
+
+2.2. Basic Branch and Bound
+- Find the shortest path by seeing each length to node if its optimal or not
+- Then expand (look) through all possible paths to see if there is one with lower length 
+- It tries the optimal path on each iteration
+- Almost brute-forcing like the British Museum Method
+- All possible node paths are extended (repeated)
+- Demo: Extensions: 835
+
+2.3. Branch and bound with Extended list filtering:
+- Start searching again
+- Don't extend the already searched letters
+- Demo: Extensions: 38
+- Demo: Does look left
+
+2.4. Admissable Heuristic:
+- calculate "potential lengths" with estimations
+- Demo: Extensions: 70
+- Demo: Does not look left
+
+2.5. A* (A star)
+- A* = Branch & Bound with Extended List Filtering + Branch & Bound with admissable heurestics
+- works well on maps, but not guaranteed to work correctly on merged points
+
+3. heurestics:
+- admissable
+- consistency - estimations to same lenght aligned nodes, should be same

@@ -1,0 +1,12 @@
+8. Constraints: Search, Domain reduction
+https://www.youtube.com/watch?v=d1KyYyLmGpA
+09.03.2017
+
+0. General:
+
+1. Finding countries of the US:
+- Set flags:
+    R - Red
+    G - Green
+    B - Blue
+    Y - Yellow

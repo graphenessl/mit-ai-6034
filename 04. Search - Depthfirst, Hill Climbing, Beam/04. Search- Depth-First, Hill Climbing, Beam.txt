@@ -1,0 +1,51 @@
+22.12.2016
+4. Search: Depth-First, Hill Climbing, Beam
+
+
+0. General:
+- 46:00 - TEXT CONTEXT ANALYSIS included in the end.
+- Always develop the tree associated with the search
+- Search is about maps
+- Backup/Backtracking: Going to the last decision point when you hit a deadend
+- These algorithms are stupid because they cant determine whether they get closer or further from the goal
+- They also go through the same paths more than once; There are duplicate paths
+
+1. The British Musem Expansion of Tree:
+- The entire tree with its all possible paths
+- You search every single possible path!!
+
+
+1. Tree: Breadth-first Search:
+- Backtracking: supported but not used always
+- Search the entire depth
+
+2. Tree: Depth-first Search:
+- Search level by level
+- Supporst enqueued lists: Remember already queued paths and  don't search them again!
+- Does not support backtracking (but it could)
+
+3. Algorithm:
+3.1. Initialize queue
+3.2. Extend first path in queue UNLESS final node before extended (avoid duplicate paths)
+3.3.1. Enqueue
+3.3.2. Depth-first search
+
+4. Tree: Hill-Climbing search
+- Always follow the node which is the closest to the goal
+- Informed search: It compares the local nodes and sees which one is the optimal distance to the goal, until no further optimizations can be done.
+This is a heurestic.
+- Can use Backtracking
+- Can use enqueued list
+
+5. Tree: Beam search:
+- Limit the amount of paths which are going to search in earch search to some number
+- Beam width keeps only the BEST (most optimal solution) "N" paths
+- Beam search is the most intelligent one. When it is a node in the centre of all nodes, it does not go to the left part, if the goal is in the right.
+- Keep "N" best
+- Example: Roaming with a compass in 4 directions, and choose the one which goes higher
+- Problems: You might get stuck in a local maximum
+
+6. Natural language processing:
+Language knowledge
+1. Common sense knowledge: If X kills Y, Y dies and Y is hurt.
+2. Reflective level: Description of revenge: If X hurts Y, Y hurts X. [Abtrasction] - ABSTRACTION IN COMPUTER PROGRAMS

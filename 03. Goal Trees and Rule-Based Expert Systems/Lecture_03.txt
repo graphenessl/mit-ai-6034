@@ -1,0 +1,34 @@
+21.12.2016
+Lecture 03
+Reasoning: Goal Trees and Rule-Based Expert Systems
+
+1. Tree general
+- Computer programs answer "Why did you do it?" by answering the question which is above
+- "How did you do it?" By answering the method which is below
+
+2. Trees:
+- Goal tree (AND-OR) tree
+- n-tree
+- Complexity(Behavior) = MAX [ complexity(Program) && complexity(Environment)]
+
+3. Expert system:
+- Making from small group of statements => rules
+- (it is cat, it runs fast, it lives in africa) => cheetah
+
+4. Forward-chaining rule-based "expert" system. (DEDUCATION)
+- This is in fact a goal-tree
+- They are actually "novice" systems
+- You determine by being provided characteristics of a cat, if it's a cheetah
+- From Facts => Conclusion
+
+5. Backward-chaining rule-based "expert" system
+- You are being asked if a cat is a cheetah, and you do the reverse of forward-chaining, by trying
+to make sure if the rules are correct 
+- This is a cheeta, how do I prove this hypothesis?
+- Algorithm: From Hypothesis => Facts
+
+6. Knowledge-engineering rules:
+6.1. Specific cases: Test different cases, because people don't tell you everything.
+6.2. Ask questions about things appear to be the same, but handled differently. You need to make  anew rule for them.
+6.3. You build a system and you see when it cracks. And it cracks when there is a missing rule, which is not handled.
+You make an experiment on yourself and discover that some program is missing.

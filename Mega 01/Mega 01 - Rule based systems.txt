@@ -1,0 +1,16 @@
+22.12.2016:
+MEGA 1:
+Rule-Based Systems
+
+ASSERTIONS:
+A1: Millicent is from Slytherin
+A2: Harry is Hermione's friend
+
+RULES:
+P1: if ?x is INTELLIGENT 
+    AND
+    if ?x is GRIFFINDOR
+    => ?x is HERMIONE's friend
+
+TESTS:
+Millicent is from Slytherin

@@ -5,6 +5,8 @@ Course: http://ocw.mit.edu/6-034F10
 
 Instructor: **Patrick Winston**
 
+Center for Brains, Minds + Machines (CBMM): http://cbmm.mit.edu/education/courses 
+
 ## Description:
 These are my notes watching the MIT 6.034 course, together with short explanations and clarifications.
 

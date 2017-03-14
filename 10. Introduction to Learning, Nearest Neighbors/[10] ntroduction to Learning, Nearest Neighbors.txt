@@ -1,0 +1,88 @@
+10. Introduction to Learning. Nearest Neighbors. 
+https://www.youtube.com/watch?v=09mb78oiPkA
+14.03.2017
+
+Description:
+This lecture begins with a high-level view of learning, then covers nearest 
+neighbors using several graphical examples. We then discuss how to learn motor 
+skills such as bouncing a tennis ball, and consider the effects of sleep deprivation.
+
+0. General:
+- Puzzle: What would a dog think Diet Coke is for?
+- The lay of the learning land
+- Always try the simplest thing before something complex which you are less likely to understand
+- THE PRECEDENT PRINCIPLE (Weak Similarity Principle): If something is similar in some respects then it might be similar in other respects
+  It is being used in legal, medical, law cases and other.
+- You can teach people very well by telling them example stories for everything
+- Application: High dimensional spaces are good for correlation tracking
+- Recycling age: This is the age of recycling ideas, since for most of them now computers are fast enough
+- NO CAKE WITHOUT FLUOR PRINCIPLE: You cannot have a good answer without having good relevant data
+- Sleep: Guard your sleep like you guard your wallet
+
+1. Learning:
+- Learning: It is important to learn in an intelligent way, avoiding "Bulldozer intelligence" thinking
+- We are learning by trying to recognize a category, but also by trying to apply some PRECEDENT
+- You don't learn as much without _problem solving_
+
+2. LEARNING TYPES:
+
+    2.1. REGULARITY: Learning based on observations of regularity
+         - Computers are pretty good at it
+         - A branch of "Bulldozer Computing"
+
+         *) NEAREST NEIGHBOURS (Pattern recognition)
+         *) NEURAL NETS (Mimic biology)
+         *) BOOSTING (Theory)
+
+    2.2. CONSTRAINTS: The human-like approach
+         *) ONE SHOT LEARNING: You learn something _definite_ from each experience/experiment
+         *) EXPLANATION BASED LEARNING: 
+            - "I get As at subjects where I can convince myself what is taught is true."
+            - Learning is a byproduct of self-explanation.
+
+3. Nearest neighbors sorting mechanism:
+   === Article sorting ===
+   - Algorithm: Build first the Decision Boundaries, using the perpendicular bisectors method
+   - Algorithm: The probe question is relatively small (word)
+
+   - A better method: By measuring the angle towards the nearest cluster destinations [Picture 04]
+   - This is a very simple implementation, can be done more complicated
+
+   === Robot arm ===
+   - Algorithm: 1. Childhood - Record all the (possible) actions of the robot arm in a table. Make sure include all forces (torque, rotation, etc.)
+                2. Pick object - Set the desired location to pick an object, and then search within the childhood for the closest match
+   - This method was initially rejected, because computers were not powerful enough for it
+   - At first it's bad (it's still writing in the table),  but then it gets better (the machine has more options to interpolate)
+
+4. Neuroscience:
+- Brain: The human brain has 10^10 neurons
+- Brain: The cerebellum has 10^11 neurons
+- The human brain might be a gigantic table with rules which we fill as we live on
+
+5. Problems:
+
+   === 1. Uniform data distribution problem === 
+   The sample of data should be equally random spread, not with concentrations about certain axis (Y, Z).
+   So, we have to calculate the variance
+
+   === 2. What matters problem ===
+   - If the answer does not depend on one of the axes at all (or on the data at all).
+   - BUILD CAKE WITHOUT FLUOR PRINCIPLE: You cannot achieve a good result without relevant data for it
+   - Building an AI to predict when someone is going to go bankrupt => NO, because the available data is not relevant for this
+
+6. Sleep:
+- United States Army: How much sleep you need
+- The First Gulf War: The most stuied war
+- Due to lack of sleep, the US tanks made fratricidal attacks on their own allies
+  Their ordnance was not impaired. Their perception of where the target is, who is the target and if there is target at all was.
+- After 36 hours the firing teams said: "We are doing great". And they were firing at hospitals, churches, mosques, schools. And themselves.
+- LOSS OF SLEEP _DESTROYS_ ABILITIES
+- Winston Churchil divided his sleep to two phases, so he can work 1.5x.
+  Dividing sleep helps get a better throughput: "You get more affect of your sleep if you divide it to two"
+- Daily naps help keep a stable throughtput
+- Coffee: Caffeine does help but only after 48 hours
+- Sleep deprivation: 24h without sleep is equal to being drunk
+- Why cats and dogs think the diet coke makes people fat? Because it's only fat people who drink it
+  Dogs and cats don't have the ability to _string together events into narratives_.
+  They see the corellation, but do not understand the cause.
+- Story narratives: Humans can link events into story narratives

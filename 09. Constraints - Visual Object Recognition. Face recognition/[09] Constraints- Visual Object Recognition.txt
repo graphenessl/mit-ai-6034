@@ -11,8 +11,9 @@ To recognize faces, we use intermediate-sized features and correlation.
 - History: Face recognition has been developing slowly during the past 30 years
 - Functions: Any function can be approximated via rectangles. The smaller the rectangles => the more precies the approximation.
 - GOLDILOCKS PRINCIPLE: Not too big, not too small. Definitive features/things should not be neither too small,  neither too big and complex.
-- RUMPLESTILSKIN PRINCIPLE: 
-
+- RUMPLESTILSKIN PRINCIPLE: The princess in the Rumpelstiltskin fairy tale who got power over Rumpelstiltskin once she learned his name. 
+  Giving a name to something, whatever it may be – even if it is not the right name – allows one to expand its knowledge.
+  
 1. Machine vision: David Marr
 - Person: David Marr (https://en.wikipedia.org/wiki/David_Marr_(neuroscientist))
 - Based on neuroscience research

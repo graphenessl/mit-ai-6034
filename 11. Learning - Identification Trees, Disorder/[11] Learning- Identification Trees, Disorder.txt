@@ -1,0 +1,52 @@
+11. Learning: Identification Trees. Disorders. Rules for disorders. Simplification of rules.
+https://www.youtube.com/watch?v=SXBG3RGr_Rc
+15.03.2017
+[21:00]
+
+Description:
+In this lecture, we build an identification tree based on yes/no tests. 
+We start by arranging the tree based on tests that result in homogeneous subsets. 
+For larger datasets, this is generalized by measuring the disorder of subsets.
+
+0. General:
+- OCCAM'S RAZOR PRINCIPLE: From few definitions, the simplest and shortest one is always preferred. 
+  The simplest explanation is often the best explanation
+- Heuristic of Good Life: When you have a problem, ask someone who knows the answer.
+  It's the least amount of work, it's not even as hard as going to Google.
+
+1. Data set: Vampires
+- Database with vampires: You have a database, based on which you need to decide if someone is a vampire or not
+- Teaching (Meta): If you want someone to learn something, use examples of data which are relevant to them (students -> vampires)
+- Nearest neighbour: It cannot be applied to the vampire database because some of the data you cannot _quantify_. It's _symoblic_ data.
+- Problem 1 - Data types:           It's non-numerical
+- Problem 2 - Noise:                Some characteristics don't matter
+- Problem 3 - Partial importance:   Some of the characteristics do matter, but only _part_ of the time
+- Problem 4 - Cost:                 Some of the tests might be more expensive to do than others (Finding garlic and making them eat it)
+- Using TESTS not VECTORS OF REAL VALUES => Tree of Tests
+- Size of data: You never bet your life on data set which is small
+
+2. Identification trees:
+- Identification tree: Contains tests
+- Confusion with Decision Trees: THEY ARE DIFFERENT LABELS FOR DIFFERENT THINGS
+- Good identification tree requirements: Minimum number of levels; Low test cost;
+- Tree sizes: You want _small trees_
+- Algorithm: 1. Tests: First make tests
+             2. Element values: Then separate the values of each test for vampires and non-vampires
+             3. Strongest features: Find which features define if subject is vampire or not, based on highest score of homogemous data
+
+- Large input data: You cannot determine the relationships straight away.
+                    Every test would be 0. No sets would be homogenous at all.     
+
+3. Disorder. Measuring disorder:
+- This is a very used mechanism 
+- Algorithm [Pictures]
+
+4. Rules:
+- Numerical disorder: You just pick a number and use it as a threshold value in order to separate the values again binarily to - and +
+- Repetition: You never use the same test twice. Use different threshold instead.
+
+5. Simplification of rules:
+- Simplification: Define the decision boundaries with straight perpendicular lines only [Picture 17]
+- Virtues: You use only the tests which are useful to the case. Measurement technique is _simpler_ and costs _less_
+- CONVERTING A TREE INTO A SET OF RULES: [Picture 18]
+  - Rules can be simplified if they check the same things

@@ -1,0 +1,70 @@
+12a: Neural Nets
+https://www.youtube.com/watch?v=uXt8qF2Zzfo
+19.06.2017
+
+Description:
+In this video, Prof. Winston introduces neural nets and back propagation.
+
+0. General:
+- NN = Neural Network
+- Patrick Winston almost decided to drop Neural Nets from the curricula in 2010
+- Jeff Hinton: He was one of the first researchers who demonstrated the use of generalized backpropagation algorithm for training multi-layer neural nets 
+    - He stunned the world with a Neural Net which classifies pictures
+    - His NN had 60 million parameters and 1000 categories
+- Enormous technology has been put after Jeff Hinton won a competition for image recognition, using Neural Networks, and proving that they can actually
+be viable for something. His method was so good, that the second place winner was not even close.
+- How to answer questions with 80% accuracy like professional neurobiologists? Just say "We don't know"
+- PRINCIPLE: "REUSE": ALWAYS REUSE THE THINGS YOU CAN
+  Reuse already made computations, in order to prevent exponential blowup
+- Finding simplicity requires making observations and putting few tricks together
+  Humans rarely do more than one observation and use more than one trick, this is why they seldom achieve miracles.
+- All great ideas are simple (and easy to overlook often)
+
+1. Neuron:
+- Dendrite: If there is enough simulation in the dendrite, a spike will be transmitted
+- Refractory period: The neuron goes quiet for a while until it recovers its strength from transmitting the signal
+- Spike: When the axon is stimulated, it drops all its vesicles to the neighbour axon
+- Action: They either fire or don't fire signal
+- Signal transmission strenght (w, weight): Whether the whole [axon] decides to stimulate the tranmission or not
+- Each [stimuli] is multiplied by a [weight]. And then it goes to a [summer]. However, is their total sum enough to stimulate the [neuron] to [fire]?
+  The [summer] runs through a [threshold] which decides if it is big enough to activate the [neuron] transmission.
+  If the [signa] is stronger than the [threshold], then 1 is transmitted
+
+With this model we have:
+1. ALL or NONE
+2. Cumulative influence
+3. Synaptic weight
+--- Present only in real neurons ---
+4. Refractory period
+5. Axonal bifurcation: to which dendrite the signal goes. But science is not sure how it works exactly (see [image_03]) [13:00]
+6. Timings
+
+2. Neural Net [15:47] 
+- [Neural Net] = function([inputs] [weights] [thresholds])
+- Training a neural net: Adjusting the [weights] and [thresholds] so the [output] is what we want => [Neural Net] is a function approximiator
+- So, maybe we have some sample data which gives out an output vector with the desired data
+- [Performance Function] How well we are doing: Comparing the [desired value] with the [actual value]
+    [Performance function] = vector[desired data] x vector[actual data]
+- You are trying to minimze or maximize the performance function in order to find which data is producing the best results
+- Partial derivatives are used in order to determine moving in which direction is better (it is better than using a Hillclimb search which explodes
+  exponentially in computation difficulty). This from the partial derivative of [weight1] and [weight2] we will move in the direction of the gradient
+- However, gradients cannot be used, because they require continous space [22:42]
+- Calculating this problem was problematic for 25 years, the weights.
+
+3. Neural Net: Calculation tricks [24:30]
+- Trick 01: Optimizing the [threshold]
+- Trick 02: Getting rid of the step
+
+4. Proving why the math calculation formula is convenient: Z(1-Z) (Z - output)
+
+5. Neural Network: Training
+- Initially, the weights are random
+- Weight rate: shouldn't be too big or too small. There shouldn't be any drastic jumps in the rates graph [41:30]
+- Neural Networks can be interconnected with each other [45:10]
+- You can save up some calculations, as some of the values are already calculated in the neighbours [47:40 ]
+- REUSE PRINCIPLE: Reuse already made computations, in order to prevent exponential blowup
+- Fast Fourier Transform (FFT): It also re-uses partial results
+
+6. Complexity:
+- Depth increase: If we increase the amount of [layers],  we increase the complexity in a [Linear] way 
+- Width increase: [w]^2 complexity

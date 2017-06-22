@@ -8,7 +8,7 @@ In this video, Prof. Winston introduces neural nets and back propagation.
 0. General:
 - NN = Neural Network
 - Patrick Winston almost decided to drop Neural Nets from the curricula in 2010
-- Jeff Hinton: He was one of the first researchers who demonstrated the use of generalized backpropagation algorithm for training multi-layer neural nets 
+- Geoffrey Hinton: He was one of the first researchers who demonstrated the use of generalized backpropagation algorithm for training multi-layer neural nets 
     - He stunned the world with a Neural Net which classifies pictures
     - His NN had 60 million parameters and 1000 categories
 - Enormous technology has been put after Jeff Hinton won a competition for image recognition, using Neural Networks, and proving that they can actually

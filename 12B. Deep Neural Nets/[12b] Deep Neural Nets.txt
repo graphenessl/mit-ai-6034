@@ -1,0 +1,81 @@
+12b: Deep Neural Nets
+https://www.youtube.com/watch?v=VrMHA3yX_QI
+20.06.2017
+
+Description:
+In this lecture, Prof. Winston discusses BLANK and modern breakthroughs in neural net research.
+
+0. General:
+- Principle: Deep complexity creates exploitable bias
+- Machine learning appliances: Find undervalued products
+- Machine learning in games: Calculate what you receive per 1 mana point by diving to the [mana amount]
+- Predictions: You can predict combo (actions) predictions of the opponent, because some abilities work well together 
+  and others do not work well together
+- Action affinity: (https://www.youtube.com/watch?v=ao3P5QCrF_M) [39:30]
+  Action rotation: A -> B -> C
+                  A-B, B-C
+- [NO RECALCULATION PRINCIPLE]: DO NOT RECALCULATE, WHAT HAS BEEN ALREADY CALCULATED ONCE!!!
+- Production image recognition companies reduce the size of the actual image, before recognizing it to a fixed value (e.g. 256x256)
+- General: The things you do, are training your neurons to a particular behavior. You are a reflection of what you do.
+- Machine Learning in games: https://www.youtube.com/watch?v=qv6UVOQ0F44
+- The plague of any Neural Network is that it gets stuck at a local maximum 
+
+1. Neural Networks: Again:
+- They have a [sigmoid function]
+- [Dot product]: multiplication of two vectors: 
+  URL: http://www.mathsisfun.com/algebra/vectors-dot-product.html
+- There is actually [dot product] being done in our heads, based on this theory
+- Images are reduced to small size: 256  x 256
+- HOW NEURAL NETWORKS WORK: [10:00]
+- [CONVOLUTION]: [10:00]
+  A single [neuron] moves from left to right scanning a single small area [10 x 10] and returning a result multiple times 
+- [POOLING]: [11:00]
+  Max pooling is looking around the neighbourhood and taking the maximum value
+- [Kernel]: The [neuron] which goes and scans the image
+- Old days: In the past CPUs allowed to work only with small pictures
+- [Classes]: 10 digits = 10 classes
+- [Samples] = [Examples ]
+- Hidden layer: it makes some sort of generalization on the [input values]
+- Learning = Neural evolution
+- [Fitness]: How well the [NN] performs
+
+2. Demo:
+- Recognizing animals by their [height] and the [shadows] they cast
+- We are going to use shadows as inputs to the [NN]
+- Training: Not to classify animals, but to understand the nature of things which sees in the environment
+- Hidden layer: It makes a ENCODED  generalization
+- It is still hard for scientists to undertand what [neurons] respond to
+- [Boltzmann machine]: type of stochastic recurrent neural network
+- [AUTOCODING]: First examples of the entire environment are gathered. Then you can actually get different [classes] of the environment
+  in order to learn to recognize them
+
+3. Modification of parameters:
+- [Threshold] (T): Brings the value up or down the sigmoid
+- [Weight] (w)   : Changes the steepness of the sigmoid
+- Getting Neural Networks to work: [T](Threshold) and [w](Weight) have to be adjusted in order to have the right form of the sigmoid function
+- [SIGMOID/LOGISTIC function]: How the sigmoig function is adjusted [31:15]
+- [BACKPROPAGATION]: Helps calculate the error for each layer (applying the Chain rule repeatedly at all possible paths in the network)
+- [Learning]: In the end of a learning iteration 
+- Get the probability of each [Class]
+- [SOFTMAX]: Give a range of [classes] and a [probability] associated with each of them [36:00]
+- [DROPOUT]: NN train better if on each iteration you flip a coin, and if it's tails, it means the neuron is dead, and it is being dropped.
+  This prevents the NN in going into local maximums.
+  Killing neurons 
+- Neural Networks should be more accurately called "wide networks" because often they are just wider, than deeper (no more than 10 layers/columns)
+- Plain old [Backpropagation] seems to do as well alone as compared to [dropout] and [autocoding] or [Boltzmann machine]
+- If the last layer of the NN turns red and doesnt allow any values to pass, this might not be a bug, as it prefets to say "NO" to a 
+  recognition which it is unsure of
+- Experiment: A solution is found even when you remove neurons from the hidden layers
+- If a NN takes too long, it might get stuck in a local maximum
+- Breakthrought in NN: When you widen the NN you turn local maxima in saddle points
+
+4. Conclusion:
+- Does those things see the way we see?
+- [44:30]: Change in few pixels can retain the same image, but change the programmatic way it is viewed drastically
+- This is happening because the algorithm sees enough local evidence that is it NOT a [bus], and information from the other 999
+  classes, that this is a [bus]
+- Google is putting captions to pictures
+- Grouping of different labels: Detect action and what is happening in the scene of the picture ("Young people playing frisbee outside in the summer)
+- [47:18] Patrick Winstons algorithm: After detecting an object, remove as much as possible side details from it, as long as it is still recognizable
+- Thanks to the algorithm of Patrick Winston, the program can see (and get trained) with less details.
+- However, computers dont see the way we see

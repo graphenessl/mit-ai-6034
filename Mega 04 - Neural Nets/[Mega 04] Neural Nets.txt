@@ -1,0 +1,21 @@
+
+0. General:
+  Andrew Ng: Deep Learning, Self-Taught Learning and Unsupervised Feature Learning
+  https://www.youtube.com/watch?v=n1ViNeWhC24
+
+- AI is all about feature detection
+- Most of the feature detectio algorithms are hand-written with a lot of manual effort
+- Coming up and tuning the features is one of the most time-consuming things in ML
+- The same part of the brain can process different kind of senses
+- The complexity of the algorithm comes from the data not from the algorithm 
+- The first thing the brain does when it receives an image is to look for edges/lines
+- One neuron is looking for vertial and other for horizontal edges
+- Edge detection via neurons is more useful than knowing simply where the pixels are
+- Sparce coding: taking small areas of image (Convolution), modeling their values in a vector,
+  then comparing the vector with the dictionary, then assiging a match coefficient to each vector
+- Geoffrey Hinton's method was to combine in the "hidden" layers groups of "edges" (higher level layers)
+- Most websites have good data but simple algorithms => Good fit and user XP
+
+1. Neural Nets:
+- Hillclimbing algorithm is used in Neural Nets traversing
+- XOR is difficult to be modelled with only 1 layer of neurons. At least 2 are required.

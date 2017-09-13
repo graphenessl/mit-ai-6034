@@ -1,0 +1,142 @@
+13. Learning: Genetic Algorithms
+12.09.2017
+
+Description:
+This lecture explores genetic algorithms at a conceptual level. 
+We consider three approaches to how a population evolves towards desirable traits, ending with ranks of both fitness and diversity. 
+We briefly discuss how this space is rich with solutions.
+
+0. General:
+- [PRINCIPLE]: DIVERSITY IS GOOD
+  In order to survive, an organism needs to be able to FIT, and also to be [DIVERSE]
+- [PRINCIPLE]: ASK WHERE THE CREDIT LIES
+  Usually, people are claiming the credit, are lying where it has originated.
+  Is it the algorithm that simply works, or is it the developer who hand-tuned it on purpose to work well?
+- [Science]: The collection and documentatio of observable facts and an ongoing discussion about how those facts can be best linked
+  together in order to form expalantions.
+- [Chromosomes]: How is information encoded in genes? 
+  Some of the genes provide information on how many [objects there are].
+  Others provide information on the size of the object. 
+  Others provide information how two objects are pieced together (0, 90, 180 degrees of bounding and etc.)
+  And others provide information on the control and movement functions of the object. 
+- [Alleles]: Different value variants of the same gene.
+  Example: Gene of eyes -> Alleles: Brown, Green, Blue.
+- [Dominant and recessive alleles]: In all organisms, there are [dominant] and [recessive] values for each allel. The dominant one overshadows
+  the recessive allel.
+  BROWN-blue - two dominand alleles (dominant allel overshadows the recessive)
+  BROWN-BROWN - two dominadn alleles 
+  blue-blue   - two recessive alleles
+- [Generations]: It all starts from nature (again): As volcanos erupt and form layers of dust and flora and fauna get burried in the soil,
+  different layers of soil form, each one representing a different epoch of time with its own distinct characteristics.
+- [cornucopia]: a large amount of supply of something
+- [chocolate]: generates a mild high
+- God throw all the dices before we were born
+- Humans are made of chemicals
+- The RNA constantly changes with mutations and only successful mutations get transferred in the generations
+- Small genes are used by ribosomes to build small proteins and vice versa
+- Humans and monkeys have 96% the same DNA
+- Scientists have created microorganisms which can create insulin
+- A gene contains instructions how to create a protein
+- When mitosis (cell splitting) occurs, the nucleus is copied twice, then the cell is split from the center.
+  If anything goes wrong between some of the nucleotides, DNA mutation occurs. Radiation causes a lot of DNA mutations in cells
+- Mating: Half of the male and half of the female DNA are combined together in a new individual, who has traits from both of them
+- Humans breeded all types of dogs from few base wolf species
+- Natural selection: Nature forcing selectively only certain genes and features to be tranferred in generations
+  Basically all traits, which differ people, are features which have been modified over time. 
+  For instance, snakes' poison is actually a modified saliva
+- Theory of life by Alexander Oranin: Basic chemical structures formed basic organisms after reactions, which later formed more complex 
+  living organisms
+- Miller-Urey experiment: Try to simulate the basic conditions in old Earth, by applying natural energy modifiers to them. It has been 
+  observed, that the water used in the experiment (which went through consant 'natural' chemical reactions) became black, containing a lot
+  amin acids and proteins, which are required to create life.
+- RNA chemistry theory on how life formed: particles of RNA have formed together to produce proteins
+- Life: Repeating patterns of chemical reactions via molecules
+- Friedrich Wohler: Created urine via chemistry in 1828. Until then it was thought that only living organisms can create organic substances
+- Are we really alive then? Or is it just a chemical reaction with perks, which can be either slowed down or fastened by our actions?
+- Chemical evolution: Simple molecules react with other molecules, as the environment changes (temperature, rain, etc.)
+- Evolution: The size of fishes globally is shrinking, because fishers keep tossing back small fish back to the sea, so only small fish
+  traits are passed on
+- Desert theory: As humans expand and kill animals, there are no animals left to graze the grass. Andre Voisin has discovered that
+  some grass types have built dependency on being grazing by animals, in order to re-grow. It's not actually even a theory, since he moved
+  some animals to a desert with few grass in it, and just in 3 years the grass has widly recovered. It turns out that grass depends on animals
+  to "massage" the ground with their feet, to fertilize the land and to stimulate re-growth by being grazed.
+- Mutations: Change in the nucleotide counterpart of a single nucleotide in a gene is responsible for the difference between
+  long and short hair dog breeds
+- Local maximums: Sharks have not mutated for couple of millions of years, unlike others. They were stuck in a local maximum due to a small
+  step size
+- 1830s: Human body consists of a colony of living cells
+- Layers of life within humans: 1966: Lynn Margulus in her paper, by analyzing previous researc and piecing them together, concluded that the mitochondrias used 
+  to be individual independent bacteria once (before being 'absorbed' into a mutual life within the cells), even with their own genes.
+  Mitochondria are known as the powerhouses of the cell. They are organelles that act like a digestive system which takes in nutrients, 
+  breaks them down, and creates energy rich molecules for the cell. The biochemical processes of the cell are known as cellular respiration.
+  Basically, mitochondrias feed with the chemicals which the cell provides them, and in return they release new chemicals which are required
+  by the cell itself to be fed. It is believed (according to the paper of 2008 by Nakajima, Sano and Matsuoka named "Auto-/heretotrophic
+  endosymbiosis evolves in a mature stage of ecosystem development in a microcosm composed of an alga, a bacterium and a ciliate"). They used a Protis, which ate bacteria, which it was not able to digest. When staration occured,
+  the Protis fed with the 'leftovers' emitted by the bacteria inside it, thus maintaining survival, making a possible explanation of how
+  mitochondrias occured.
+
+- Smallest forms of 'life': It is not even cells or mitochondrias which are the smallest forms of structure in living cells. It turns out 
+  these to be viroids, which can create compounds on their own. 
+- Cooperation: All of these 4 layers have cooperated with each other, in order to create 
+  a complex union for the greater good. Division (specialization) of laber occurs and after a certain point cells can no longer survive on
+  their own without being part of the system. A group is formed with common tasks and interest. And what is the best way to protect the group?
+  By forming a little wall around it, so it becomes a cell!
+- Paper: Phagotrophy by a flagellate selects for a prey: A possible origin of multicellularity: An experiment which leaves a Protist instance
+  left in an environment with free Algaes (Protist feeds itself by eating an Algae). Soon randomly some Algaes formed together in pairs,
+  making it difficult to be eaten by the Protist. After few generations, Algaes formed via mutations in even larger groups together
+  close to each other, making it truly impossible to be eaten at all by Protist, thus surviving, and passing their genes in the next generations.
+
+1. Genetic Algorithms:
+- They naively mimick biology
+- [Mitosis]: cell division that results in two daughter cells each having the same number and kind of chromosomes as the parent 
+  nucleus, typical of ordinary tissue growth.
+- It's the grandparents' chromosomes which get recombined
+- In females, the chromosomes are pre-determined
+- Algorithm: Looks for [optimal value] in a space
+- [Fitness]: Unfortunately, it drives to local maximums, as it seems
+- [step size] ~= [mutation size]  
+- [Diversity]: Sum of all distances of the next possible generations cancidates, from the current generation (alread selected candidates) 
+- [Fitness]: Same calculation as above
+- Both [diversity] and [fitness] combined together can be used to measure a better next generation
+ 
+2. METHOD 1: The higher the chance of developing a [feature], which results in better [fitness], the better the rate of [survival]
+- This algorithm gets stuck in local maximum if too small a step is used
+
+3. METHOD 2: [RANK SPACE METHOD]: 
+  [Image 9]
+- Each individual with best [fitness] gets the best [probability] to be selected to be in the next generation (however, he might not get
+  selected at all.)
+- It's NOT the probability of the second individual being selected, provided that the first one is NOT selected.
+- This algorithm gets stuck in local maximum if too small a step is used
+- [Simulated annealing]: 
+  Starting with a big step (in order to detect all possible big local changes) and then gradually reset the step.
+  Simulated annealing (SA) is a probabilistic technique for approximating the global optimum of a given function.
+- However, even this algorithm cannot "jump" big lapses of evolution, even if a big [step] size is set
+  [Image 11]
+
+4. METHOD 3: 
+  [Image 12]
+- Adding a measure of [diversity], which makes the data spread out from each other
+- In order to survive, an organism needs to be able to FIT, and also to be [DIVERSE]
+- Example: Perhaps sharks have not experienced further evolution for 6000M years  is because they have already reached their peak point
+- This algorithm is able to pass big gaps of missing evolution [Image 13] since it combines the best from X and the best from Y together
+- Still, this algorithm is terribly naive
+
+5. Applications of Genetic algorithms
+
+- #1 [Planning]: In planning, where taking certain steps is required 
+
+- #2 [Horse race predictions]: Commensurate values
+
+6. DEMO - Karl Sims:
+  https://www.youtube.com/watch?v=JBgG_VSP7f8
+- A demo of how basic structures learn to move around in different environments
+- Funny: Some of the creatures evolved to move by hitting themselves in the chests, ignoring laws of physics
+- Some of the "organisms" evolved to catch the reward, while others just tried to block the opponent from getting the reward.
+  They have just attacked directly the opponent, totally ignoring the reward. Others evolved to give up on the attack, once the opponent
+  has captured it, instead of trying to attack
+- The answer: The [space of solutions] in this demonstration is so _rich_ that almost any individual can find a working one, in order to move.
+  Otherwise the Genetic algorithms are quite naive themselves. 
+  Karl Sims basically imported the right choices in the version space on purpose. He added a lot of 'clues' to the individuals to reach 
+  these solutions faster than normal.
+- [WHERE IS THE CREDIT PRINCIPLE]: Is it the algorithm that simply works, or is it the developer who hand-tuned it on purpose to work well?

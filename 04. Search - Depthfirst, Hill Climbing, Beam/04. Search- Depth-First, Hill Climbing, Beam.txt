@@ -21,7 +21,7 @@
 
 2. Tree: Depth-first Search:
 - Search level by level
-- Supporst enqueued lists: Remember already queued paths and  don't search them again!
+- Supports enqueued lists: Remember already queued paths and  don't search them again!
 - Does not support backtracking (but it could)
 
 3. Algorithm:
@@ -33,12 +33,12 @@
 4. Tree: Hill-Climbing search
 - Always follow the node which is the closest to the goal
 - Informed search: It compares the local nodes and sees which one is the optimal distance to the goal, until no further optimizations can be done.
-This is a heurestic.
+This is a heuristic.
 - Can use Backtracking
 - Can use enqueued list
 
 5. Tree: Beam search:
-- Limit the amount of paths which are going to search in earch search to some number
+- Limit the amount of paths which are going to search in each search to some number
 - Beam width keeps only the BEST (most optimal solution) "N" paths
 - Beam search is the most intelligent one. When it is a node in the centre of all nodes, it does not go to the left part, if the goal is in the right.
 - Keep "N" best
@@ -48,4 +48,4 @@ This is a heurestic.
 6. Natural language processing:
 Language knowledge
 1. Common sense knowledge: If X kills Y, Y dies and Y is hurt.
-2. Reflective level: Description of revenge: If X hurts Y, Y hurts X. [Abtrasction] - ABSTRACTION IN COMPUTER PROGRAMS
+2. Reflective level: Description of revenge: If X hurts Y, Y hurts X. [Abstrasction] - ABSTRACTION IN COMPUTER PROGRAMS

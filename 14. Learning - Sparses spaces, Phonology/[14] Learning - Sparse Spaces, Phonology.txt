@@ -1,0 +1,120 @@
+14. Learning: Sparse Spaces, Phonology
+https://www.youtube.com/watch?v=L73hY1pBcQI&index=15&list=PLnvKubj2-I2LhIibS8TOGC42xsD3-liux
+26.09.2017
+
+Description:
+Why do "cats" and "dogs" end with different plural sounds, and how do we learn this?
+We can represent this problem in terms of distinctive features, and then generalize. We end this lecture with a brief discussion of how to approach AI problems.
+
+0. General:
+- nugatory: small
+- pistareen: small spanish coin. something not important
+- supererogatory - excessive
+- hind legs: back legs
+- emeritus: Retired, but allowed to hold their title
+- Telugu: Indian language. Telugu is a Dravidian language native to India.
+It stands alongside Hindi, English, and Bengali as one of the few languages with official status in more than one Indian state
+- Phonology: The branch of linguistics that deals with systems of sounds
+- French: Spoken by 52M
+- Telugu: Spoken  by 56M
+- What if God were an Engineer? Or what if I were God and I were an engineer?
+- Acoustics: Acoustics is the interdisciplinary science that deals with the study of all mechanical waves in gases, liquids, 
+  and solids including topics such as vibration, sound, ultrasound and infrasound.
+- catecism - summary of something
+- [PRINCIPLE]: AVOID THE PROCRUSTEAN BED: Matching the wrong mechanism to the wrong problem by force
+- [PRINCIPLE]: YOU CAN'T LEARN UNLESS YOU ALMOST KNOW ALREADY
+
+1. Learning mechanisms:
+  [BASIC METHODS]            ------> [NAIVE BIOLOGICAL MIMICRY]
+- Nearest neighbours                 - Neural networks
+- Identification trees               - Genetic algorithms
+- Been around for a long time
+  best option when you dont know
+  what to do with the problem
+
+- These algorithms are quite simple. Getting them to work is like getting a dog to walk on his hind legs only
+- You can make it happen, but they never happen to do it quite well
+- And you have to do a lot of trickery and training, to make it happen
+
+2. Focus on the problem, rather than the mechanism:
+- Deep theory, FIOS
+
+3. Phonology:
+- Phonological rules
+- Plurals: vibrating "zzz" sound. The throat vibrates
+- Dogs: ZZZZZZ
+- Cats: ssssss
+
+- Experiment: Yip and Sussman
+- Morris Halle: Latvian-American linguist and an Institute Professor and professor emeritus of linguistics at MIT
+
+4. Distinctive Feature Theory:
+- [phones]: phone is any distinct speech sound or gesture, regardless of whether the exact sound is critical to the meanings of words. 
+  In contrast, a phoneme is a speech sound that, in a given language, if it were swapped with another phoneme, would change the meaning of the word. Phones are absolute, not specific to any language, 
+- [phonemes]: but phonemes can be discussed only in reference to specific languages.
+- [speech] = set of distinctive features
+- Thea features are binary. Example: Does it produce [zzz] or [sss] sound?. + voiced, - voiced 
+- Distinctive feature: The most basic unit of phonological structure that may be analyzed in phonological theory.
+- 14 basic dinstinctive features 
+- 2^14 = 16 000 phonemes
+- No language on earth uses more than 100 phonemes
+- English: 40 phonemes
+- [Hallucination]: Some of the distinctive features are hallucinated, without them being even there
+- [The McGurk effect]
+  https://www.youtube.com/watch?v=G-lN8vWm3m0
+  Perceptual phenomenon that demonstrates an interaction between hearing and vision in speech perception. 
+  The illusion occurs when the auditory component of one sound is paired with the visual component of another sound, leading to the perception of a third sound.[1] The visual information a person gets from seeing a person speak changes the way they hear the sound
+- The visual perception can influence the auditory perception, due to conflicting signals.
+  What you see has a large influence on what you hear.
+- It's very difficult to pronounce things correctly, if you don't see the speaker
+- Foreigns are not able to speak as a native, because they are not watching the mouth of the speaker
+- Different people have trouble pronouncing different languages, because their own language does not have those phones
+- The vocal cords are just like a marionette: They produce the sounds which are required by moving
+
+5. Words:
+- [syllabic]: can that sound form the core of a syllable?
+
+6. Sussman-Yip Machine/Leaner:
+  [Image 04]
+- [propagators]: information can be emitted to both directions 
+- [method]: they decided to analyze only the first part of the word, ignoring the last dound [Image 05]
+- [Algorithm]:
+  The final algorithm they reached:
+  1. Collect [positive] and [negative] examples 
+  2. [Seed]. Picked a [positive] example to start from. Called it [seed]
+  3. [Generalization] They turn - and + to * and see if the generalization works.
+     Generalizing with the [positive] example until it matches/correlates with a [negative] example
+- The above algorithm learns phonological rules [Image 08-09]
+- If the last sound is with voiced pronunciation => plural [Z] [Image 10]
+- It uses [Beam] search
+
+7. Sparse space:
+- When you have a high dimensional [sparce space] with enough distance between the examples, it is easier to draw a hyperplane
+  separating the examples
+
+  [Central Limit Theorem]:
+  The central limit theorem (CLT) is a statistical theory that states that given a sufficiently large sample size from a population
+  with a finite level of variance, the mean of all samples from the same population will be approximately equal to the mean of the 
+  population. Furthermore, all of the samples will follow an approximate normal distribution pattern, with all variances being approximately equal to the variance of the population divided by each sample's size.  
+
+- If there's enough space between the phonemes/examples they will be easy to separate, as they are spread randomly, but at even distances
+- [consonants] are easier to spot than [vowels] because they have multiple pairs with one distinctive feature
+
+8. David Marr:
+- Sussman-Yips's experiment was in line with Marr's catechism
+
+[Marr's catechism]:
+- When dealing with an AI problem:
+1. Specify the problem
+2. Make a representation suitable of the problem (In the current example: The vowel/consonants features)
+- A good representation makes the right things explicit
+- Exposes a constraint. A constraint is the key to formulating the processing, leading to a solution => good model
+- Localness criteria 
+3. Determine an approach/method (constraints start to emerge)
+4. Pick a mechanism/devise an algorithm (write an algorithm to do an experiment)
+5. Experiment
+
+- A lot of researches in AI become fans of a particular approach mechanism and they try to generalize it, without differentiating
+- "Neural nets are so cool, I think the entire human intelligence can be explained with a suitable neural net"
+- They try to apply it where it is not the right thing
+- They could say "Let's make a neural net, which properly pluralizes neural nets", trying to force-fit the mechanism

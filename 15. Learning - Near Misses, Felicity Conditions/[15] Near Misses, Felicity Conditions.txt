@@ -1,0 +1,94 @@
+15. Learning: Near Misses, Felicity Conditions
+https://www.youtube.com/watch?v=sh3EPjhhd40&index=16&list=PLnvKubj2-I2LhIibS8TOGC42xsD3-liux
+03.10.2017
+
+Description:
+To determine whether three blocks form an arch, we use a model which evolves through examples and near misses; 
+this is an example of one-shot learning. 
+We also discuss other aspects of how students learn, and how to package your ideas better.
+
+0. General:
+Vocabulary:
+- construe  = to understand the meaning, especially of other people's actions and statements, in a particular way
+- knee-jerk = automatic response
+- covenant  = agreement
+- quanta    = portion
+- virtue    = efficiency
+- salient   = remarkable part of something
+- fort      = fortified building
+- soiree    = a party
+- née       = the name of a woman before she was married, following the married name
+- cuisine   = style of cooking (French cuisine)
+- profound  = felt very deeply (a profound effect)
+
+- The most important lecture of all
+- How to become smarter
+- How to learn in [human-like way] in single shot. Extremely different from anything seen before
+- Opposite of learning tiny or nothing from trillion of examples. This is going to learn something definite from every example
+- [PRINCIPLE] - TALKING TO YOURSELF: TALKING TO YOURSELF WHILE SOLVING PROBLEMS HELP DEFINE BETTER DESCRIPTIONS, THUS BETTER SOLUTIONS
+- [PRINCIPLE] - LEARNING: YOU CAN'T LEARN THE NEXT THING, UNLESS YOU ALMOST KNOW THE PREVIOUS RELATED THINGS ALREADY
+
+1. Near-Miss Learning: Learning from the negative examples as well
+- It contrasts very much with neural nets
+- Showing the positives, then the negatives, and learning from the negatives what the model should not contain
+- Learning definite things even from negative examples
+- The [example] is also the initial [model] => [NEAR MISS]
+- Learning: from "supports" to "must support"
+
+2. Example: Arch:
+- [9:30] Color was not specified until now. We add it as a separate graph, indicating which colors it can take as an value, for this to be an arch
+- [10:50] Colors: We see blue color. It depends on the world we build. If all the colors in the alphabet [R,G,B] have been seen, we mark
+  this as a closed condition
+- The algorithm finds features in each iteration (color, roof-type)
+- Most of the time a new [feature] is discovered, we have a choice how to interpret it
+
+3. The algorithm and heuristics of Rashad Malkowski:
+- [examples]: they generalize    (+)
+- [near misses]: they specialize (-)
+- This algorithm both does generalizing and specializing
+- [Rashad Malkowski] made an algorithm, using beam-search to identify soybean deceases. It turned out to be better than plant pathology books
+- [Require link heuristic]: Going from one model to another with the essential feature
+- [Forbidden link heuristic]: Defining a negative link
+- [Extend set heuristic]: Define new detals about existing feature
+- [Drop link heuristic]: Dropping the details (colors), previously defined in a feature, thus generalizing it (now it points to 'anything' )
+- [Climb tree heuristic]: Climbing from smaller categories to large (cell -> organ -> body)
+
+4. Learning:
+- General: This method organizes the knowledge in a specific order, in order to match the limited computation capacity of the students
+- A teacher who teaches a student
+- What you know, is kind of like a network.
+- Initially, you don't know anything 
+- All knowledge quanta depend on each other. There can be missing links
+- Initial state of knowledge: [Image 08 ]: You can't learn something which is far unknown
+- [Teacher]: must understand student learning and using knowledge styles
+- [Students]: must trust teacher and understand his teaching style
+
+5. Core of learning:
+- describe a definite description to itself => looking at the descriptions => looking at the differences 
+- If you are like the machine, you can't learn anything, unless you build the descriptions => TALK TO YOURSELF
+- If you talk to yourself, you build the kind of descriptions, that make it possible to do the learning
+
+- Experiment by Michelene Chi (Mickey Chi): Measure grades by how much people talk while solving problems
+- Smart people talked and explained things to themselves dramatically more. They had dramatically higher grade scores
+- How to be smarter: Smart people talk more to themselves
+
+6. [INFLUENTIAL] - HOW TO PACKAGE YOUR IDEAS (How to be famous or sell anything):
+- If you package your ideas better, you will win 
+- WINSTON'S STAR:
+1. [Symbol]: "Arch"
+   - Always use some kind of visual symbol, with which people will remember the idea
+   - Patrick Winston used the arch for his example ("Arch Learning")
+2. [Slogan]: "Near Miss"
+   - Hyman Minsky: "Put yourself back in the mental state when you understood the idea." 
+3. [Surprise]: "One Shot Learning"
+   - It was possible to learn something little from each example (unlike neural nets)
+4. [Salient]: "You can get One Shot Learning via Near Misses" 
+   - It must STICK OUT in some way
+   - There are papers with too many ideas, which prevent them from sticking out
+   - the
+5. [Story]:
+   - Humans love stories. We love people to tell us stories. We love things to be packaged with stories
+   - Education = Story stelling and story understanding
+   - Your ideas are like your children: You want to make sure they have the best life possible
+   - Julia Child: A french TV cook who popularized the French cuisine in USA
+   - AI 6.034 is about how to make good science, to make yourself smarter and to make yourself famous

@@ -1,0 +1,93 @@
+16. Learning: Support Vector Machines
+https://www.youtube.com/watch?v=_PwhiWxHK8o
+04.10.2017
+
+Description:
+In this lecture, we explore support vector machines in some mathematical detail.
+We use Lagrange multipliers to maximize the width of the street given certain constraints.
+If needed, we transform vectors into another space, using a kernel function.
+
+0. General:
+Dictionary:
+- vapid       =  banal
+- shrunk      = fall around
+- sore        = painful, hurt
+- varnacular  = form of a language that a particular group of speakers use naturally, especially in informal situations
+- resuscitate = ressurect
+- epiphanous  = sudden intuitive insight
+
+- [PRINCIPLE]: WHEN STUCK, SWITCH TO ANOTHER PRINCIPLE
+- Different countries form, because there are different cultures. Different cultures form, because people live in
+  different locations. Different locations have different climatic and atmosperic conditions, which yield different crops and influence
+  the behavior of the people [URL: https://worldview.earthdata.nasa.gov/?p=geographic&l=VIIRS_SNPP_CorrectedReflectance_TrueColor,MODIS_Aqua_CorrectedReflectance_TrueColor,MODIS_Terra_CorrectedReflectance_TrueColor,Reference_Labels(hidden),Reference_Features(hidden),Coastlines(hidden)&t=2017-09-19&z=3&v=33.24422940340912,14.72917036576699,77.43563565340912,39.47917036576699]
+
+0.5. History of Supporting Vector Machines:
+- Author: Vladimir Vapnik: Immigrated from USSR in 1991
+- He did the basic version of SVM in his PhD thesis in Moscow University in 1960s. But they didn't have any computers to try it
+- He is invited by Bell Labs to USA. In 1993 he sends 3 papers to NIPS (Neural Information Processing  Systems). They are rejected. 
+- Bell-Labs was interested in hand-written letter recognition and neural nets
+- Vapnik despised neural nets. He bets that SVM can do better hand-writing recognition than neural nets. It was a dinner bet.
+- Napoleon: "It's amazing to see what a soldier will do for a bit of ribbon"
+
+1. Introduction:
+- How to divide a space with [decision boundaries]
+
+2. Support Vector Machines:
+- [Widest S treet Approach]: The widest street which separates the [positive] from the [negative] examples
+- It tries to place the line in a such way, that the street is as wide as possible
+- [?] How do you make a rule to find that decision boundary?
+- [decision rule] -> [decision boundary]
+
+- [dot product]: http://www.falstad.com/dotproduct/
+  The dot product tells you what amount of one vector goes in the direction of another. 
+  For instance, if you pulled a box 10 meters at an inclined angle, there is a horizontal component and a vertical component to 
+  your force vector. So the dot product in this case would give you the amount of force going in the direction of the displacement, 
+  or in the direction that the box moved
+
+- [dot product] is used in order to measure the distance from one example to the [median of the street] 
+  (line of separation between - and + examples)
+- [Image 04]:
+  [dot product] particularly, the projection of the [unknown example] is projected towards the perpendicular vector to the median.
+  The projection (dot product) gives us the distance to the median. Thus, it informs us whether the next point is in [left] or [right] side
+
+- Problems: we dont know what vector [w] to use (blue) and what [b] to use => not enough constraints so far
+- New formula [Image 06]: All samples are separated by the interval [-1, +1] 
+- Introducing [y.i] which is: [Image 07]
+                y.i = -1 - negative examples
+                y.i = +1 - positive examples
+                y.i = 0  - examples in the gutter region (the middle of the "wide street")
+
+- Calculating the width of the street: [positive vector] - [negative vector]
+- [unit vector]: magnitude = 1. New vectors can be scaled from the unit vector (1 x 2.5 = 2.5)
+
+- Maximizing the width of the street:
+  [Lagrange multipliers] are being used: searching for gradient vectors which both are perpendicular at the touch point between the
+  the limiting condition and the function
+- We need to differentiate with respect to [w] (Take the derivative with respect to Lagrang e multipliers)
+- [w] turns out to be a linear sum of the samples (for some alpha will be " 0" )
+- [derivative] = slope of a line between two points (how fast a function changes)
+- [derivatives]: the more the distance between the two points which are being differentiated, the greater the approximation rate is (loss of accuracy)
+- We found out: the optimization depends on the pairs of dot product of examples [w * w]
+
+3. Demo: Supporting Vector Machines
+- [convex space]: SVM have a convex space. It can _never_ get stuck in a local maximum, unlike neural networks
+- [Image 17]: Linearly inseparable examples: It struggles, and eventually gives up on a solution which renders few of the points with errors
+- With linearly inseparable examples, it requires the [space] to be transformed to one which makes it possible to separate the points
+- [PRINCIPLE]: When stuck, change perspective
+
+4. Space transformation. Kernel function:
+- It's a user-specified function which transfors the features (transforms the/to  space):
+  For many algorithms that solve these tasks, the data in raw representation have to be explicitly transformed into feature vector 
+  representations via a user-specified feature map: in contrast, kernel methods require only a user-specified kernel, i.e., 
+  a similarity function over pairs of data points in raw representation.
+- [Kernel function]: We basically transform the vector pairs 
+- [kernel function]: provide a dot product of the vectors in another space
+- kernel types:
+    *) linear kernel (n=1,2,3...): Vapnik used this with n=2 for hand-writing recognition and it worked very well 
+    *) radial basis kernel: if a too small [sigma] is selected, overfitting will happen 
+- SVM: A convex method (with only one maximum), guaranteed to produce a global solution
+- SVM: Prone to overfitting, but protected against local maxima
+- SVM: It's an essential part to use a [kernel method]
+- Great ideas, followed by periods of nothing happening, followed by an epiphanous moment when the original idea seemed to have a great 
+  power with a little twist.
+- It took Vapnik 30 years. Today, everybody dealing with machine learning knows his method

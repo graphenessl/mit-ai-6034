@@ -6,6 +6,8 @@ Description:
 In this lecture, Prof. Winston discusses BLANK and modern breakthroughs in neural net research.
 
 0. General:
+- [PRINCIPLE] - Principle of the Universal Knowledge: The better you understand something, the easlier and clearer
+  you are able to distinguish it's unique classifying features, ignoring the noise
 - Principle: Deep complexity creates exploitable bias
 - Machine learning appliances: Find undervalued products
 - Machine learning in games: Calculate what you receive per 1 mana point by diving to the [mana amount]
@@ -21,17 +23,48 @@ In this lecture, Prof. Winston discusses BLANK and modern breakthroughs in neura
 - The plague of any Neural Network is that it gets stuck at a local maximum 
 
 1. Neural Networks: Again:
+- Very good explanation: https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/
 - They have a [sigmoid function]
 - [Dot product]: multiplication of two vectors: 
   URL: http://www.mathsisfun.com/algebra/vectors-dot-product.html
 - There is actually [dot product] being done in our heads, based on this theory
 - Images are reduced to small size: 256  x 256
 - HOW NEURAL NETWORKS WORK: [10:00]
+
 - [CONVOLUTION]: [10:00]
-  A single [neuron] moves from left to right scanning a single small area [10 x 10] and returning a result multiple times 
+  A single [neuron] moves from left to right scanning a single small area [10 x 10] and returning a result multiple times
+  The primary purpose of Convolution in case of a ConvNet is to extract features from the input image. 
+  Convolution preserves the spatial relationship between pixels by learning image features using small squares of input data.
+  Filters: https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/
+
 - [POOLING]: [11:00]
   Max pooling is looking around the neighbourhood and taking the maximum value
+
 - [Kernel]: The [neuron] which goes and scans the image
+  The scanning [n x n] matrix is called a ‘filter‘ or ‘kernel’ or ‘feature detector’ and the matrix formed by sliding the filter over 
+  the image and computing the dot product is called the ‘Convolved Feature’ or ‘Activation Map’ or the ‘Feature Map‘. 
+  It is important to note that filters acts as feature detectors from the original input image.
+  
+  In practice, a CNN learns the values of these filters on its own during the training process (although we still need to specify 
+  parameters such as number of filters, filter size, architecture of the network etc. before the training process). 
+  The more number of filters we have, the more image features get extracted and the better our network becomes 
+  at recognizing patterns in unseen images.
+
+- [Depth]:
+  Depth corresponds to the number of filters we use for the convolution operation. 
+  [Image 14]: boat image using three distinct filters, thus producing three different feature maps as shown. 
+  You can think of these three feature maps as stacked 2d matrices, so, the ‘depth’ of the feature map would be three.
+
+- [Stride]:
+  Stride is the number of pixels by which we slide our filter matrix over the input matrix. 
+  When the stride is 1 then we move the filters one pixel at a time. When the stride is 2, then the filters jump 2 pixels at a time 
+  as we slide them around. Having a larger stride will produce smaller feature maps.
+
+- [Zero-padding]: 
+  Sometimes, it is convenient to pad the input matrix with zeros around the border, so that we can apply the filter to bordering 
+  elements of our input image matrix. A nice feature of zero padding is that it allows us to control the size of the feature maps. 
+  Adding zero-padding is also called wide convolution, and not using zero-padding would be a narrow convolution. 
+
 - Old days: In the past CPUs allowed to work only with small pictures
 - [Classes]: 10 digits = 10 classes
 - [Samples] = [Examples ]

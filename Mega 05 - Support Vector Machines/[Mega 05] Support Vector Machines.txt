@@ -1,0 +1,75 @@
+Mega R5. Support Vector Machines
+https://www.youtube.com/watch?v=hM2EAvMkhtk&list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi&index=26
+06.10.2017
+
+Description:
+We start by discussing what a support vector is, using two-dimensional graphs as an example. We work Problem 1 of Quiz 4, Fall 2008: 
+identifying support vectors, describing the classifier, and using a kernel function to project points into a new space.
+
+0. General:
+Dictionary:
+- resonance   = the quality of being loud and clear
+- suffice     = to be enough
+- olden       = ancient
+- monstrosity = a very big monster
+- concavity   = opposite of convex 
+
+1. Support Vector Machines - Recitation:
+https://www.youtube.com/watch?v=ik7E7r2a1h8
+
+- [support vector]: any point, which is neccessary to define the [decision boundary]
+- [support vector]: always requires at least 2 points (1+ and 1-)
+- [decision boundary]: it is parallel to the [gutter] (support vector line). the line is often [perpendicular] between the [-] and [+] points
+
+- Supervised learning method
+- SVM is a  numeric classifier, not symbolic 
+- It draws a single decision boundary, maximizing the width between [-] and [+] examples
+- [gutter]: The lines which contain the closes [+] or [-] example to the [decision boundary]
+- They draw boundaries in space
+- A neutral net might not separate the data with the widest street possible
+- Important difference: A neutral network might adapt to the number of classes. SVM requires a fix amount of classes
+  Example: The neural network might detect the numbers or symbol types (A-z, 1-2-34)
+           SVM is good for recognizing exact amount of classes (10 digits)
+- Unless a [training example] is inside the [gutter], it does not affect the [decision boundary ]
+- [decision boundary]: in 2D, it is a line. In 1D it is a point. 3D -> a plane.
+
+- [w.->]: the smaller the [margin] of the area between the gutters, the bigger [w.->]
+
+- [alphas]: supportiveness values: how big a role each point (support vector) plays in determing the [decision boundary ]
+  the more the removal/addition of a support vector changes the [boundary line], the higher alpha it has [Image 21]
+
+- [if data is not linearly separable]:
+  *) Apply transformation
+  *) Replace [dot product] function with another function (kernel), effectively transforming the space
+- [kernel]: a similarity measure
+- [kernels]:
+  *) linear - draws a line
+  *) quadratic - draws a parabola, hyperbola, or etc.
+  *) polynomial - more complicated
+  *) radial basis - very powerful, can classify _any_ data set
+     - Like the gaussian function, it can draw circles only around [+] support vectors, in order to differentiate them from [-]
+     - It can also be tuned to detect both [-] and [+]
+     - You are adding another dimension to your classifier
+
+3. Problems:
+- There are shorter ways to calculate
+- [alphas]: how significant a point on the graph is towards creatin a boundary (a perpendicular gradient)
+- [alpha]: high -> narrows in the boundary, low -> less narrow in the boundary
+- [alpha]: how the point does not affect the boundary, then it is 0 and can be removed
+
+4. [w] and [b]: How to get them?
+- [w]: the dividing line (yellow dotted line). it is the ultimate [decision boundary] whether an example is [-] or  [+]
+- [supporting vectors]: vectors can be represented as points. ("support points")
+- the first [support vector] can be chosen ambiguosly (example: k-nearest neighbour)
+- [support vectors]: they try to define the widest space
+
+4. Problem 3: With a kernel funciton:
+- in this example, a linear line cannot be drawn to separate the examples 
+- [Ф]: function which brings X into a new dimension space
+- there's only one peak
+- it's hard to calculate the [alphas]  by hand
+- [space transformation via kernel]: transforming from 1D to 2D space
+- they are being plotted on the new 2D [cartesian space] via the [Ф] formula of [sin] and [cos]
+- it can also be done only with [cos]. you can use a different [Ф] if it works
+- if they give you a [Ф], do a [dot product] with it
+- if they give it [k], treat it as a [dot product]? 

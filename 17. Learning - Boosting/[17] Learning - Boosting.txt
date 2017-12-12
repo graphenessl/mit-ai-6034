@@ -1,0 +1,94 @@
+17. 17. Learning: Boosting
+https://www.youtube.com/watch?v=UHBmv7qCey4
+02.11.2017
+
+Description:
+Can multiple weak classifiers be used to make a strong one? 
+We examine the boosting algorithm, which adjusts the weight of each classifier, and work through the math. 
+We end with how boosting doesn't seem to overfit, and mention some applications.
+
+0. General:
+Dictionary:
+- venerable   = respected, well known
+- vapid       = boring
+- oscillation  = vibrating, insecure movements between two things
+- chalk       = white material used for writing on the black board
+- drape       = arrange something around something else (like items)
+- stipulate   = instruct on how something must be done
+- alas        = unfortunately
+
+- [Identification types of learning]:
+  Nearest neighbours, Decision trees: They work most of the time without problems!
+- [Biologically inspired learning]:
+  [Neural networks]: they are prone to overfitting, if you pick the wrong constants.
+  Together with [Genetic algorithms] they are too naive in mimicking nature
+- [PRINCIPLE] WISDOM OF THE CROWD:
+  Let different people (classifiers) in the crowd decide.
+  However, we add different [weights] to the opinion of each individual (classifier), as some are smarter than others.
+  Eventually, it is the wisdom of [weighted] experts, who have different expertise at the different regions of the knowledge [space]
+- Humans VS Computers:
+  The computer is a slave, which might sit and calculate all day until it turns blue.
+  But a human cannot and shouldn't do that. You'd rather do it expeditiously
+- The "Thank God Hole":
+  Most of the time, when amateur climbers climb a difficult hill, they are scared to death.
+  Every now and then, when they are about to fall and then find a little hole, where they can stick a fingernail in, to keep them
+  from falling, they call it the "Thank God" hole.
+
+1. Boosting:
+- Easy to implement, very powerful
+- Letting multiple methods work on your behalf
+- Can the crowd be more intelligent than the individuals in the crowd?
+- It has to do with [binary classification] problems:
+
+  [h] - classifier (binary)
+  [h] = [-1; +1]
+
+  * is this a cup a [tea] or [coffee]?
+  [coffee] => h = +1
+  [tea]   => h = -1
+
+- But you can use [boosting] with any [classifier] (neural nets, decision trees and etc.)
+
+2. Classifiers:
+- [Error rate] of classifier: [0; 1]
+- Less than 0.5 => weak classifier (slightly better than flipping a coin)
+- Stronger classifier: Multiple weak classifier combined, and voting
+- Stronger classifier: Get the [sign] of the majority of the classifiers
+- There's no area where the both classifiers are giving the wrong answer, so one is always right
+- But there can be cases when there might be areas, where both classifiers are wrong
+
+3. Boosting:
+- You can use [boosting] with any kind of [classifier]
+- Example with [decision stump] classifier
+- But it can be used with [neural nets], [decision tree], [nearest neighbour]
+
+  4.1. Exxagaration of errors:
+  [h1] - n errors
+  [h2] - Exaggarated errors of [h1]: n errors x [coefficient]
+  [h3] - (h1.errors + h2.exaggarated) x [coefficient]
+
+- Exxagarated errors: Multiply the error by a coefficient
+- Each [error space] has a weight
+- [Sum] of all [weights] must be = 1 => [distribution]
+- [distribution] - sum of weights, equal to 1
+- [error rate] = sum of all [error.i]x[weight.i]
+- [decision stump] - 1 level decision tree 
+  Example:
+  [ Weight > 95 kg ]
+     |          |
+     |[yes]     |[no]
+     |          |
+   [obese]   [normal]
+
+- [Wisdom of the crowrd]: You can combine different classifiers together
+- They are all going to make some [errors] at the different parts of the [space]
+- The "Thank God Hole" of dealing with boosting problems:
+  All you have to do is to scale [correct] and [incorrect] weights, so they are equal both to 1/2
+  This was phenomenom was noticed by the developers of the algorithm but by a 6.034 instructor
+  The sum of the weights is going to be a scaled version of what they were before, so they add up to 1/2
+- Overfitting: Boosting seem to NOT OVERFIT, althought it is still imperfectly understood
+  (in problems like handwriting recognition, speech recognition - they all use boosting)
+  The [decision tree stumps] wrap themselves so tightly around the [error points] that there is no room for overfitting
+  because nothing else will fit in that same volume. This is why Patrick Winston thinks the [boosting] solutions does not seem to overfit.
+- In conclusion: It's magic. Use it. It works (in his own words!)
+- It's very useful for [dimensional learning]

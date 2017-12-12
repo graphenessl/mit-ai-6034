@@ -53,7 +53,7 @@ It stands alongside Hindi, English, and Bengali as one of the few languages with
   In contrast, a phoneme is a speech sound that, in a given language, if it were swapped with another phoneme, would change the meaning of the word. Phones are absolute, not specific to any language, 
 - [phonemes]: but phonemes can be discussed only in reference to specific languages.
 - [speech] = set of distinctive features
-- Thea features are binary. Example: Does it produce [zzz] or [sss] sound?. + voiced, - voiced 
+- The features are binary. Example: Does it produce [zzz] or [sss] sound?. + voiced, - voiced 
 - Distinctive feature: The most basic unit of phonological structure that may be analyzed in phonological theory.
 - 14 basic dinstinctive features 
 - 2^14 = 16 000 phonemes

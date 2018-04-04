@@ -1,0 +1,37 @@
+Mega R6. Boosting
+https://www.youtube.com/watch?v=ZZmzMJB-tow&index=29&list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi
+04.04.2018
+
+Description:
+This mega-recitation covers the boosting problem from Quiz 4, Fall 2009.
+We determine which classifiers to use, then perform three rounds of boosting,
+adjusting the weights in each round.  This gives us an expression for the final classifier.
+
+0. General:
+Dictionary:
+- ID trees: Identification trees
+
+1. Boosting - Recitation:
+- Classifiers: Never use a 50/50 classifier which results in exactly 50% chance, given the weights
+  Example: A classifier which marks 5[+] and 5[-] from 10 data points
+- Boosting: Initially you start with the same weights, then you start to change them
+
+2. Classifiers test:
+- This is NOT [boosting], just getting introduced in the topic
+- [A]: All vampires are evil; All non-vampires are not evil
+- Solution: There are 6 correct [classifiers]
+- Algorithm:
+  1. We first classify how many members of the set (vampires) match to [classifiers] we have set and we count the incorrect tests
+  Example: All vampires are evil test.
+  2. We determine the [classifiers] which have least amount of wrong classifications of members
+  3. [Classifiers] which have already been included in another [classifier] are not included
+  Example: [F] has already been included in [E]
+  4. Do not choose [classifiers] which are strictly with less options
+  5. Try to combine the classifiers which get the least amount of tests wrong
+- In [boosting] we always choose the classifier with least errors
+  6. Also check for [classifiers] which are already contained as a subset in an another classifier
+
+3. Boosting
+- Weight recalculation: [30:00+]
+- Boosting gets several weak classifiers together to vote together
+- How many rounds of boosting to do? - Until it converges or you think it's enough

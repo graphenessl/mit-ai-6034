@@ -1,10 +1,10 @@
-17. 17. Learning: Boosting
+17. 17. Learning: Boosting. Decision tree stumps. 'Wisdom of the crowd': Combining different classifiers together
 https://www.youtube.com/watch?v=UHBmv7qCey4
 02.11.2017
 
 Description:
-Can multiple weak classifiers be used to make a strong one? 
-We examine the boosting algorithm, which adjusts the weight of each classifier, and work through the math. 
+Can multiple weak classifiers be used to make a strong one?
+We examine the boosting algorithm, which adjusts the weight of each classifier, and work through the math.
 We end with how boosting doesn't seem to overfit, and mention some applications.
 
 0. General:
@@ -72,7 +72,7 @@ Dictionary:
 - [Sum] of all [weights] must be = 1 => [distribution]
 - [distribution] - sum of weights, equal to 1
 - [error rate] = sum of all [error.i]x[weight.i]
-- [decision stump] - 1 level decision tree 
+- [decision stump] - 1 level decision tree
   Example:
   [ Weight > 95 kg ]
      |          |
@@ -80,13 +80,13 @@ Dictionary:
      |          |
    [obese]   [normal]
 
-- [Wisdom of the crowrd]: You can combine different classifiers together
+- [Wisdom of the crowd]: You can combine different classifiers together
 - They are all going to make some [errors] at the different parts of the [space]
 - The "Thank God Hole" of dealing with boosting problems:
   All you have to do is to scale [correct] and [incorrect] weights, so they are equal both to 1/2
   This was phenomenom was noticed by the developers of the algorithm but by a 6.034 instructor
   The sum of the weights is going to be a scaled version of what they were before, so they add up to 1/2
-- Overfitting: Boosting seem to NOT OVERFIT, althought it is still imperfectly understood
+- Overfitting: Boosting seem to NOT OVERFIT, although it is still imperfectly understood
   (in problems like handwriting recognition, speech recognition - they all use boosting)
   The [decision tree stumps] wrap themselves so tightly around the [error points] that there is no room for overfitting
   because nothing else will fit in that same volume. This is why Patrick Winston thinks the [boosting] solutions does not seem to overfit.

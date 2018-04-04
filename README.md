@@ -5,7 +5,7 @@ Course: http://ocw.mit.edu/6-034F10
 
 Instructor: **Patrick Winston**
 
-Center for Brains, Minds + Machines (CBMM): http://cbmm.mit.edu/education/courses 
+Center for Brains, Minds + Machines (CBMM): http://cbmm.mit.edu/education/courses
 
 ## Description:
 These are my notes watching the MIT 6.034 course, together with short explanations and clarifications.
@@ -16,11 +16,11 @@ https://ai6034.mit.edu/wiki/index.php?title=Main_Page
 ## Schedule and topics:
 https://ai6034.mit.edu/wiki/index.php?title=Reference_material_and_playlist
 
-## Readings for each class:
-https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/readings/
-
 ## Lectures:
 http://courses.csail.mit.edu/6.034f/ai3/
+
+## Required readings for each lecture:
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/readings/
 
 ## Videos:
 https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/lecture-videos/

@@ -35,3 +35,128 @@ Dictionary:
 - Weight recalculation: [30:00+]
 - Boosting gets several weak classifiers together to vote together
 - How many rounds of boosting to do? - Until it converges or you think it's enough
+
+https://www.youtube.com/watch?v=gmok1h8wG-Q
+4. Recitation: 6.034 Recitation 10: Boosting (Adaboost - Adaptive Boosting)
+- [boosting]: combination of weak few machine learning classifiers in one strong one
+- [Machine learning methids]:
+    - Nearest neighbours
+    - Neural networks
+    - Support Vector Machines
+    - ID (identification trees)
+    - Naive Bayes classification: https://www.youtube.com/watch?v=CPqOCI0ahss
+    ^-- little imperfect classifiers
+- [Formula]: [Image 05]
+- Error rate:
+    [more wrong classifier]   -> [more negative vote power]
+    [more correct classifier] -> [more correct  vote power]
+
+[Algorithm]:
+1. The big classifier (H) is assembled in a series of rounds
+2. In each round pick the best weak classifier (h) and assign a vote power [v] to it and append it to the overall classifier
+3. The best classifier: with fewest errors and the ones which emphasizes previously wrongly classified points
+
+5. Boosting algorithm::
+- [Example]:
+  5 data points:
+  4 x [+]
+  1 x [-]
+
+- Start ID trees algorithm: [Image 06]
+
+[ALGORITHM]
+- [1]: ID trees classifiers:
+
+                        [ID trees algorithm:]
+
+     ----------------------------------------------------------------------------------------------------------------------------------------------------
+     classifier |  correctly classified  |   incorrectly classified   | error_rate.round 1 | error_rate.round 2 | error_rate.round 3 | error_rate.round 4
+     ----------------------------------------------------------------------------------------------------------------------------------------------------
+        x < 2   | 3: [A], [D], [C]       |  2: [B], [E]               |  2/5 => 0.4        | 2/8 = 0.25         | 1/2   = 0.5
+        x < 4   | 2: [A], [D]            |  3: [B], [C], [E]          |  3/5 => 0.6        | 6/8 = 0.75         | 10/12 = 0.83
+        x < 6   | 4: [A], [B], [D], [E]  |  1: [C]                    |  1/5 => 0.2        | 4/8 = 0.50         | 4/12  = 0.33
+                |                        |                            |                    |                    |
+        x > 2   | 2: [B], [E]            |  3:  [A], [C], [D]         |  3/5 => 0.6        | 6/8 = 0.75         | 1/2   = 0.5
+        x > 4   | 3: [B], [E], [C]       |  2:  [A], [D]              |  2/5 => 0.4        | 2/8 = 0.25         | 2/12  = 0.17 (1/6)
+        x > 6   | 1: [C]                 |  4: [A], [B], [D], [E]     |  4/5 => 0.8        | 4/8 = 0.50         | 8/12  = 0.67
+
+    ------------------------------------------------------
+    Selected classifiers | round 1  | round 2 | round 3
+    ------------------------------------------------------
+        classifier       | x < 6    | x < 2   | x >4
+        error rate       | 0.20     | 0.25    | 0.17
+        vote power       | 1/2 ln 4 | 1/2 ln 3| 1/2 ln 5   |         |
+
+        NOTE: [error rate] of first first classifier group is: [all points]/[all points] - [second group classifier]
+              It's because they do the opposite thing
+        NOTE: the number after the [ln] is equal to the [denominator] of the lowest [error rate] in the current [round] minus 1
+        NOTE: always [weights] > 0 or [weights] = 1/2
+        NOTE: There is no need to do [boosting] if 1 [classifier] is enough or there is only 1 [point]
+        NOTE: Boosting helps a lot with overfitting
+        NOTE: If you have 2 [classifiers] with [error points] which do not overlap, you are able to make a perfect [classifier] by combining them with equal [vote]
+              However, boosting is not guaranteed to come up with those [classifiers] in the first rounds
+
+              Example:
+              [classifier 1]: ERRORS: A, B, C
+              [classifier 2]: ERRORS:           D, E
+              [classifier 3]: ERRORS:                   F, G
+
+- [2]: Assign weights:
+    - [2.1][ROUND 1]: Set equal initial weights to each [point]: 1 / [amount of all points]
+    - Example:
+      [A].weight = 1/5
+      [B].weight = 1/5
+      [C].weight = 1/5
+      [D].weight = 1/5
+      [E].weight = 1/5
+
+      -------------------------------------------------------------------------------
+      point | weight.round 1 | weight.round 2 | weight.round 3 | weight.round 4
+      -------------------------------------------------------------------------------
+      A     | 1/5            | 1/8            | 1/12
+      B     | 1/5            | 1/8            | 1/4
+      C     | 1/5  (wrong )  | 1/2            | 1/12
+      D     | 1/5            | 1/8            | 1/12
+      E     | 1/5            | 1/8            | 1/4
+
+      NOTE: The sum of all [weights] is   1
+            Sum of correct weights   is: 1/2
+            Sum of incorrect weights is: 1/2
+
+- [3]: Calculate error rate for each [classifier] ( [x < 2], [x < 4], [x < 6] ... )
+
+- [4]: Pick [weak classifier] (h) with the lowest [error rate]:
+     - sometimes 2 [classifiers] can have the same [error rate] (tie). As a tie-breaker, we use the one which is first
+        min ( [error rate])
+
+     - [ALTERNATIVE METHEOD]: You can select the best classifier by:
+        max ( [error rate] - 1/2 )
+
+- [5]: Calculate voting power for the best [weak classifier]:
+
+        1/2 ln [ (1-[error rate]) / [error rate] ]
+
+- [6]: Append the [vote power] of the [classifier] to the big classifier [H]: [Image 07]
+   - when the [weak classifiers] [h] disagree, the one with the bigger [vote power] wins
+   - any combination of two [classifiers] in the big [classifier] [H] should be greater than the third
+   - When we are finished: Each [point] is classified wrongly only by one [classifier] and the other two [classifiers] are strong enough to correct it
+
+   H (x) = SIGN [       ( 1/2 ln 4 (x<6) )      +      ( 1/2 ln 3 (x<2) )         +  ( 1/2 ln 5 (x>4) )       ]
+
+                       [best_classifier.round1]        [best_classifier.round2]     [best_classifier.round3]
+
+- [7]: [ROUND 1 END]: Check are we finished?
+  - [success criteria]:
+    1) overall classifier is good enough or met
+       Example: For a set [X] we want accuracy = 0.90
+    2) we have done enough boosting rounds
+    3) no good classifiers left
+       Our best classifier has [error rate] = 0.5
+
+- [8]: If step [7] is not satisfied, update the [weight] for each [training point]:
+  - This is done especially to highlight the [misclassified] points
+  - We want [wrongly classified point] to have their [weight] increased, so they are highlighted -> [correct points] have their [weight] lowered
+
+  [FORMULA]:
+   - [correctly classified point]: 1/2 * [ 1 / (1 - [error rate]) ] * [weight.old]
+   - [wrongly   classified point]: 1/2 * [ 1 /      [error rate]  ] * [weight.old]

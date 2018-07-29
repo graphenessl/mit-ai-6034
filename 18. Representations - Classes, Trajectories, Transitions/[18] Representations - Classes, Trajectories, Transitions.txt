@@ -1,0 +1,170 @@
+18. Representations - Classes, Trajectories, Transitions
+https://www.youtube.com/watch?v=bQI0OmJPby4
+29.07.2017
+
+Description:
+In this lecture, we consider the nature of human intelligence, including our ability to tell and understand stories.
+We discuss the most useful elements of our inner language: classification, transitions, trajectories, and story sequences.
+
+Dictionary:
+- bipedal       = sitting on two legs
+- conspicuous   = obvious
+- conical       = shaped like a cone /\
+- pelvis        = the bones that form a bowl-shaped structure in the area below the waist at the top of the legs, and to which the leg bones and spine are joined
+- mastadon      = a large, hairy elephant which is now extinct
+- enablement    = the process of making someone able to do something, or making something possible
+- reification   = the act of changing something abstract (= existing as a thought or idea) into something real
+- barreling ahead = straight and quickly continue forward
+- ashtray       = utensil for storing the ashes (of a cigar)
+- conveyance    = transportation
+- denote        = mark something
+- aphorism      = concise, terse, laconic, and/or memorable expression of a general truth or principle
+- grizzling     = disapproving
+- pronoun       = a word that replaces a noun in a sentence. Example: I, me, mine, myself, she, her, hers, herself, we, us, ours and ourselves
+- antecedent    = a word or phrase that a pronoun refers back to
+- superfluous   = not needed
+- gratuitous    = without a particular needed reason
+- admonition    = a harsh warning
+
+0. General:
+- This lecture presents different ways to represent data and concepts
+- Basically, often knowledge or concepts are expressed in a representation, which can be fit to one of the 3 models which are present in this lecture
+- The AI systems often have no idea about what they are doing
+- Trivia: Patrick Winston makes sure to remember the names of all his students in the beginning of the semester
+- Bosendorfer piano has extra octave keys on the bottom
+- Some professional piano players when playing on a new Bosendorfer need someone to cover the extra keys for them, because they are traned to rely on their peripherial vision
+- You learn a concept by giving a name to it
+- Trivia: Patrick Winston does not address himself with shortened "Pat", because he thinks it's a unit measure for butter
+- PRINCIPE: "If you think about something only in one way, you have no recourse when you get stuck." - Marvin Minsky
+
+1. History of humans:
+- Humans have been around for ~200 000 years
+- Evolutionary characteristic: increasing brain size
+- Humans became bipedal way before they had a larger brain...
+- Neanderthal: They've had big heads and pelvises, however they were working only with stone tools
+- There are a lot of scenarios about why Homo Sapiens, despite being nothing special in the beginning, turned out to be dominant
+- These dominant Homo Sapiens were located at the Central East Africa region and dominated the rest
+- 25 000 years ago, Homo Sapiens were doing cave drawings, making primitive jewelry, dedicated to women
+- Humans lowed to put on them objects which show status from early times...
+- Those were [symbols]. Symbols ld to language
+- Noam Chomsky: "It's the ability to put together 2 concepts, in order form a 3rd new concept, without disturbing the first 2 and without limits"
+
+2. Stories:
+- Stories: Humans are separated from other primates by the ability to understand stories
+- Education: It's all about storytelling and understanding
+- The language with which we [talk] and we [think] are different!
+- Paradox: Sometimes when people remember a particular scene, they do not remember in which language the conversation was held
+
+3. Semantic nets:
+- [reification]: the links between different [concepts] can also imply other things. Example: [murder] implies that the target is [dead]
+                 this allows the links to be treated as objects/concepts as well
+- [localization layers]: Marvin Minsky modeled these relationships via [frames]: [agent] --> [victim]
+- [problem of parasitic semantics]: a lot of the meanings can be inferred. Example: if someone kills someone else, then they might as well have a motive.
+                                    At least this is what we think and what we might infer to the machine as well.
+                                    The difference is, even if we project this to the machine, it doesn't mean that the machine know it. Only we know it.
+4. Representation - Classes. Classification:
+- We know about things, but we know them on different levels
+- Example:
+  [tool] - it's a very abstract concept, you cannot link a picture to it
+  [mac]  - The computer Mac, or the food Mac?
+- [general] -> [base] -> [specific]
+- The human mind has a [base] type of data as a greatest percentage of its storage [Image 06]
+
+5. Representation - Transition: [Image 07]
+- Humans mostly think about change causing change (verbs)
+- In engineering, rather, you learn about the [state] of something
+- All of this seems to be heavily connected with vision
+- [vocabulary of change]: Illustrating how objects (if at all) change [21:30]
+- [vocabulary of change elements]:
+    [⬇︎] - Decrease
+    [⬆︎] - Increase
+    [Δ] - Change
+    [A] - Appear
+    [D] - Disappear
+   ![⬇︎] - Does not decrease
+   ![⬆︎] - Does not increase
+   ![Δ] - Does not change
+   ![A] - Does not appear
+   ![D] - Does not disappear
+- [analogies]: by making  stories with similar actions but different actors, the listeners might presume that the actors might do the same actions
+- Example: the way a car crashes to the wall and a photon "crashes" to the wall of a camera (it makes it easier to understand the 2nd concept, once a familiar concept has been provided)
+
+6. Representation - Trajectory:
+- Linguistics: A lot of what we say, is actually [objects] moving through [trajectories]
+- Example: He is fine.
+           The weather becomes cold.
+- [TRAJECTORY FRAME]:
+
+[Co-agent] [Agent]
+  O          O     __________
+\||\       /||\_/ [Instrument]
+ /\         /\     -----\\---
+/  \       /  \         \\\_______
+                         | Object | --------------->
+                         |________|
+             [Source] ----------------------------------- [Destination]
+                                   (o) (o) (o) (o)
+            ._.                     [Conveyance]
+             O /
+           /||/
+            /\
+           /  \
+       [Beneficiary]
+
+- Example:
+    "Bake a cake with a friend."
+    "Prices rose, economy stalled"
+- This model helps us understand the [role] of each [object] in the concept [Image 08]
+- The Wall Street corpus has good data for trajectories. In 100 sentences there are about 25 transitions or trajectories.
+- There are "keywords" which denote if the sentence is a [transition] or a [trajectory]: by, via, with, for, to...
+
+7. Story sequence:
+- A story sequence can be a single sentence
+- Example: "Pat conformed Chris."
+  // We get an idea of what might've happened, but we don't know exactly
+- However, there might me multiple interpretations - therefore - trajectory|transition models for the [story]
+- PRINCIPE: "If you think about something only in one way, you have no recourse when you get stuck." - Marvin Minsky
+- Multiple representations means that you have multiple ways to gather [regularity] from the world and model it
+- This model helps easily identify who did the [action] (the [agent]), to whom (the [target]), and what was the outcome ([result]), thus model situations/stories
+- "conformed" and "terrorized" are [abstract] actions. "kissed" is [concrete] ("base") action
+- Using this for instance you can create a classifier which detects if a speaker is very intelligent or manipulative (using a lot of abstract actions) or someone simple and sincere
+- [abstract] actions are hard to understand and imagine
+- [simple/base] actions are easier to understand. They stimulate a mental "hallucination" in the mind of the listener
+- [hallucination]: [base] action which can be imaged
+- "kiss" helps to [hallucinate]: one's lips has touched the lips of the other
+- however, again, there are different possible scenarios, based on the relationships between the actors: (chris and pat are lovers, chris and pat are relatives, chris is a frog and pat is a prince...)
+- We have "libraries" in our head which create live images for certain actions like "kiss"
+- [networks] vs [sequences]: it's easier to imagine events as line of events => [story sequence]
+- [sequence] imposes better constraints to model events
+- If you a music instrument, you will realize how important sequences are: It's very difficult to start playing a song from the middle
+- Instead, you need to go to the beginning of a [measure]: the beginning of the verse, of the melody, etc.
+- Human memory is very rooted to sequences of items
+- [!] This explains why storytelling is important. People like events with easy and natural sequences
+
+8. Libraries of stories:
+- There are standard stories
+- We can know something by knowing what its superclass is
+- General concepts have smaller concepts underneath them:
+- Example: Events -> Disasters -> Earthquakes ...
+- If we read a newspaper article about a wedding, we know it is an [event] (superclass) and we expect to read the same things for an event,
+  with the exception, that we will expect "wedding-specific" "mental slots" to be filled in with the data of the actual article (e.g. the names of the bride and broom, the location, ...)
+- Each of the [subclasses] of the event [superclass] have their specific [properties], which we expect to fill with the actual data for the current case
+- Basically, we move from the main [frame] to the [subframes] (role, transition, trajectory)
+- This is how we model the world
+- Sometimes it can be a challenge, reading a newspaper, to fill in the properties of the subclasses...
+- Determined experimentally: Children stories are way harder sometimes than the adult stories in meaning. A children story can be about anything. [Image 12]
+- You need to make sure that when you create a story, it somehow matches an existing storytelling model. Do not create syntactic difficulty. So it is easy to relate to something previous
+
+9. How to write amazing stories!:
+
+- [⭑] RULE 1: DON'T USE [PRONOUNS]
+  - Examples: [ I, me, mine, myself, she, her, hers, herself, we, us, ours and ourselves ]
+  - they place additional syntactic burden on understanding the story by the reader. It forces them to think about the antecedents
+  - Germans and Russians languages have gender versions of nouns, which makes it 3 times harder to understand the antecedents
+
+- [⭑] RULE 2: DON'T [FORMER] OR [LATTER]
+  - No one is able to decode those words without stopping and going back to the previous thing mentioned
+
+- [⭑] RULE 3: DON'T CALL A [SHOVEL] A [SPADE]
+  - High school teachers misteach to not repeat words. As a result, people go to great lengths to find synonyms
+  - The user is confused if its a (subtle) _transition_ or a forced attempt to not use the same word...

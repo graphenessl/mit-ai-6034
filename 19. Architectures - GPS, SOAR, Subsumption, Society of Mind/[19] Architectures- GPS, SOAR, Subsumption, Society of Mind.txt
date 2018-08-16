@@ -1,0 +1,176 @@
+19. Architectures: GPS, SOAR, Subsumption, Society of Mind
+https://www.youtube.com/watch?v=PimSbFGrwXM
+16.08.2018
+
+Description:
+In this lecture, we consider cognitive architectures, including General Problem Solver, SOAR,
+Emotion Machine, Subsumption, and Genesis.  Each is based on a different hypothesis about human
+intelligence, such as the importance of language and stories.
+
+Dictionary:
+- vernacular    = dialect, jargon
+- shuttle       = move ahead and back
+- neocortex     = a part of the cerebral cortex concerned with sight and hearing in mammals, regarded as the most recently evolved part of the cortex.
+- summa         = summary
+- tour de force = an impressive performance or achievement that has been accomplished or managed with great skill
+
+0. General:
+- "Thus Spoke Zarathustra: A Book for All and None" is a philosophical novel by German philosopher Friedrich Nietzsche, composed in four parts
+  between 1883 and 1885 and published between 1883 and 1891. Much of the work deals with ideas such as the "eternal recurrence of the same",
+  the parable on the "death of God", and the "prophecy" of the Übermensch. It became famous in 2001 via a play.
+- This lecture is about combining things together
+- Estonia, 2007: They moved a Russian War memorial to the memorial cemetery. They have focused heavily on computers, because they believed
+  computation is the future. After the memorial was moved, someone brought the Estonian national network down. It was believed to be the
+  Russians, because there's a large ethnic population in Estonia. No computer can understand this story. Except one.
+- The next system articulate the idea that what we do as humans is always [problem solving]
+- Academic presentation: I will sometimes say "I", but what I mean is "we", and sometimes I will say "we", but what I mean is "they".
+- Humans: Humans have came around 50 000 years ago. What was different about them, they were able to tell and understand stories
+- TABLE SAW RULE: You never wear a gloves when operating a table saw, because the gloves might get stuck and pull your fingers
+  This is something that no one told you, but you would be able to figure out by using your imagination.
+  No one tells us many of the things we don't know, but we infer them anyways
+- RULE: HOW TO MAKE YOURSELF SMARTER:
+  *) LOOK
+  *) LISTEN
+  *) DRAW
+  *) TALK
+  Those are the particular mechanisms of language, and therefore THINKING.
+- Taking notes in class: Because it engages your motor of linguistics and visual apparatus. And that makes you smarter.
+- RULE: BEWARE OF FAST TALKERS
+  Because when they talk fast, they jam your language processor, and you can't think.
+  And when you don't think, you will buy that car or drink.
+  Those people have learned to talk fast to jam your linguistics processor
+
+Different architectures:
+
+1. General Problem Solver (G.P.S.):
+- Authors: Newell & Simon (1959)
+- You measure the difference between: [d] = (S)-(C)
+
+        ( C )          -------------------------------------> ( S )
+                                    [d] - difference
+[ Start state of Life] -------------------------------------> [Where you want to be]
+
+- Means-Ends Analysis: [5:31]
+- Problems: Combinatorial explosion
+- The GPS paradigm eventually evolved into the Soar architecture for artificial intelligence.
+- Humans: They needed to define beforehand the [difference] and [operators] in a table. Building that table turned out to be a hard job.
+- The GPS paradigm eventually evolved into the Soar architecture for artificial intelligence
+- Architecture name: [Problem Solving Hypothesis]
+
+2. SOAR:
+- It used to mean: State Operator And Result - but later they've discarded it
+- It's conceived by Cognitive scientists
+- Long term memory:
+    Assertions
+    Rules aka Productions
+- Short term memory: Most of the activity is happening here
+- Influenced by cognitive psychology experiments and how much you can hold in your short term memory
+- It's a gigantic rule-based system which shuttles rules between [Long-term memory] and [Short-term memory]
+- Preferences: What do you do with more than one [rule] that would work?
+  Tie-breaking: SOAR has an elaborate system for breaking ties of rules
+- Problem spaces: If you will solve a problem, you need to develop the problem space, and then search through that space
+  SOAR is focused on this
+- Universal sub-goaling: Whenever you can't think about what to do next, that becomes your next [problem] with its own [problem space],
+  [differences], [operators], [rules] and [assertions]
+- You start on a high level and them move towards the details
+- Architecture name: [Symbol System Hypothesis]
+- It's [symbol-centered]
+- How to "perceive a perception": Get it into a [symbolic] form
+
+3. The Emotion Machine:
+- Author: Marvin Minsky
+
+Thinking on many layers:
+- Instinctive reaction:     "Hear a sound => Turn head"
+- Learned reaction:         "Seeing a car coming towards us is NOT something which the evolution has trained us to do"
+- Deliberate thinking:      "She decides to cross the road"
+- Reflective thinking:      "She thinks about her past actions and compares it to others."
+- Self-reflective thinking: "Thinking about past events related to the planes one has made for the future"
+- Self-conscious thinking:  "How her own actions would be perceived and judged by others"
+
+- Common Sense Hypothesis: In order to think on many layers (above), you have to have "common sense" like people
+- Common Sense: How much of it there is there? And how we can go and get it?
+- There were attempts to gather "common sense" from the Internet, in order to achieve such kind of "layered thinking"
+
+4. Subsumption architecture:
+- Author: Rob Brooks (1980-1990s)
+- Brooks became very dissatisfied with the minor progress of robots
+- He thought people were thinking in the wrong way
+- At the time people thought to build a robot by:
+
+    [vision system] --> [reasoning system] --> [action system]
+
+- Layers of abstraction (Barriers):
+
+|----------------------------------------------------------------|   |
+|        Seek                [Vision][Reasoning][Action] systems |  \|/
+|----------------------------------------------------------------|
+|        Explore             [Vision][Reasoning][Action] systems |   |
+|----------------------------------------------------------------|  \|/
+|        Wander              [Vision][Reasoning][Action] systems |
+|----------------------------------------------------------------|   |
+|        Avoiding objects    [Vision][Reasoning][Action] systems |  \|/
+|----------------------------------------------------------------|
+
+- Each of these layers might sometimes talk to the lower layer, but its [VRA] system does not break
+- Structure of human brain: The human brain is also structured on layers of abstraction:
+    *) Reptilian brain  - Instinctual, dinosaur brain
+    *) Limbic brain     - Feelings and emotions
+    *) Neocortex        - Rational thinking
+
+- [Creature Hypothesis]: Once you get a machine to act as smart as an insect, the rest will be easy
+- Brooks thinks that the world world is represented by the following:
+    *) No representation:
+        Representations make possible to do models and to modify them.
+
+    *) Use the world as a model:
+        Instead, Brooks uses the world as a model.
+        Each action has a reaction. So you can just get by, by observing the reactions.
+
+       Example:
+        You don't have a map of the room, but you can get out from it by observing the path
+
+    *) Finite State Machine:
+- This was used by the Roomba robot
+- Demo of coke collecting robot (1989): The robot does not have a model of the world, instead it reacts based on interactions with the world
+- Imagination: When someone tells you to "imagine something",
+  we imagine it between more fluid and perceivable boundaries, more natural and impressive looks, not in outlandish ones
+
+5. Genesis architecture:
+- Centered on language
+- Language part:
+  *) To guide, marshal and interact with the [perception systems]
+  *) Enable the description of [events]
+- Instinct questions: "Is there anyone with blue jeans in the front row?"
+- TABLE SAW RULE: You never wear a gloves when operating a table saw, because the gloves might get stuck and pull your fingers
+  This is something that no one told you, but you would be able to figure out by using your imagination.
+  No one tells us many of the things we don't know, but we infer them anyways
+
+  EXAMPLE:
+  You run down the street with a bucket of water => You splash the water while running.
+  This is information which is not publicly available in any database. But you know it.
+- We as human beings, have the capacity to imagine perceptual things and their result with our imagination
+
+6. Rat-Baby-Human Room: Experiments in developmental psychology
+- A lot of people believe if they participate with their baby in a Harvard experiment, their kid will go to Harvard some day
+- Experiment: A rat, a baby and an adult are put in a rectangular room as a subject. Each corner of the room has a hidden pocket with a food.
+  The subject is then spinned, so it forgets which corner the pocket was. All subjects - rat, baby, human go to the diagonal corners of the rectangle.
+  If we paint one of the walls to blue, the rat and the baby go again to the diagonals. Only the adult goes to the now colored wall.
+- Then, how we determine when one is a baby and adult?
+- A baby becomes a child when it starts to use the words "left" and "right" to describe the world
+- They understand the words "left" and "right" but it doesn't matter until they start to use them to describe the world around them
+
+- Simultenous translation phenomenom: It's very difficult for human to hear something and repeat it. His thinking is being reduced to that of a rat, because his language processor is broken
+- Blocking of a language processor: When the language processor is jammed, a rat can't connect a "blue wall" with a "rectangular shape"
+- Language is the mediator in making combinations in order to build descriptions
+- RULE: HOW TO MAKE YOURSELF SMARTER:
+  *) LOOK
+  *) LISTEN
+  *) DRAW
+  *) TALK
+  Those are the particular mechanisms of language, and therefore THINKING.
+- Taking notes in class: Because it engages your motor of linguistics and visual apparatus. And that makes you smarter.
+- RULE: BEWARE OF FAST TALKERS
+  Because when they talk fast, they jam your language processor, and you can't think.
+  And when you don't think, you will buy that car or drink.
+  Those people have learned to talk fast to jam your linguistics processor
